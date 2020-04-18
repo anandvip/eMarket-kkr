@@ -1,0 +1,16 @@
+#khalsa,
+#kitab,
+#davai,
+#sabji,
+#kiryana{
+    transition: all ease-in 300ms;
+}
+
+#khalsa:hover,
+#kitab:hover,
+#davai:hover,
+#sabji:hover,
+#kiryana:hover{
+    background-color: $theGreen;
+    color: $darkBG-Font;
+}

@@ -1,0 +1,113 @@
+{
+    "Haryana": {
+        "Kurukshetra": {
+            "Sector2": {
+                "bakery": {
+                    "ShivaBakery": {
+                        "businessName": "Shiva Bakery",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    },
+                    "Shivam": {
+                        "businessName": "Shivam",
+                        "latitude": 0,
+                        "longitude": 0,
+                        "contact": 1234567890,
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "rating": 4,
+                        "comments": {
+                            "0001": "Awesome service and taste",
+                            "0002": "Awesome service and taste",
+                            "0003": "Awesome service and taste"
+                        }
+                    },
+                    "Shambhu": {
+                        "businessName": "Shambhu",
+                        "latitude": 0,
+                        "longitude": 0,
+                        "contact": 1234567890,
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "rating": 4,
+                        "comments": {
+                            "0001": "Awesome service and taste",
+                            "0002": "Awesome service and taste",
+                            "0003": "Awesome service and taste"
+                        }
+                    },
+                    "Shakti": {
+                        "businessName": "Shakti",
+                        "latitude": 0,
+                        "longitude": 0,
+                        "contact": 1234567890,
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "rating": 4,
+                        "comments": {
+                            "0001": "Awesome service and taste",
+                            "0002": "Awesome service and taste",
+                            "0003": "Awesome service and taste"
+                        }
+                    },
+                    "Sweety": {
+                        "businessName": "Sweety",
+                        "latitude": 0,
+                        "longitude": 0,
+                        "contact": 1234567890,
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "rating": 4,
+                        "comments": {
+                            "0001": "Awesome service and taste",
+                            "0002": "Awesome service and taste",
+                            "0003": "Awesome service and taste"
+                        }
+                    }
+                },
+                "books": {},
+                "chemist": {},
+                "fruits": {},
+                "groceries": {}
+            },
+            "Sector3": {},
+            "Sector4": {},
+            "Sector5": {
+                "bakery": {},
+                "books": {},
+                "chemist": {},
+                "fruits": {},
+                "groceries": {}
+            },
+            "Sector7": {
+                "bakery": {},
+                "books": {},
+                "chemist": {},
+                "fruits": {},
+                "groceries": {}
+            },
+            "Sector8": {},
+            "Sector10": {},
+            "Sector13": {
+                "bakery": {},
+                "books": {},
+                "chemist": {},
+                "fruits": {},
+                "groceries": {}
+            },
+            "MohanNagar": {}
+        },
+        "Karnal": {},
+        "Panipat": {},
+        "Ambala": {}
+    }
+}
