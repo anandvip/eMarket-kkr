@@ -96,8 +96,8 @@ body header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  /* grid-gap: 10px; */
+      grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
 
 .main .app .lang {
@@ -157,35 +157,35 @@ body header {
 }
 
 .main .app .chem {
-  background: url("/Covid19Fetch/eMarket-kkr/img/meds.png");
+  background: url("/eMarket-kkr/img/meds.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .main .app .baker {
-  background: url("/Covid19Fetch/eMarket-kkr/img/bread.png");
+  background: url("/eMarket-kkr/img/bread.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .main .app .books {
-  background: url("/Covid19Fetch/eMarket-kkr/img/books.png");
+  background: url("/eMarket-kkr/img/books.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .main .app .grocer {
-  background: url("/Covid19Fetch/eMarket-kkr/img/grocry.png");
+  background: url("/eMarket-kkr/img/grocry.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
 .main .app .vege {
-  background: url("/Covid19Fetch/eMarket-kkr/img/fruits.png");
+  background: url("/eMarket-kkr/img/fruits.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
