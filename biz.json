@@ -2,8 +2,8 @@
     "Haryana": {
         "Kurukshetra": {
             "Sector2": {
-                "bakery": {
-                    "ShivaBakery": {
+                "bakery": [
+                    {
                         "businessName": "Shiva Bakery",
                         "minimumOrder": "No Limit",
                         "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
@@ -13,7 +13,7 @@
                         "contact": 1234567890,
                         "rating": 4
                     },
-                    "Shivam": {
+                    {
                         "businessName": "Shivam",
                         "latitude": 0,
                         "longitude": 0,
@@ -28,7 +28,7 @@
                             "0003": "Awesome service and taste"
                         }
                     },
-                    "Shambhu": {
+                    {
                         "businessName": "Shambhu",
                         "latitude": 0,
                         "longitude": 0,
@@ -43,7 +43,7 @@
                             "0003": "Awesome service and taste"
                         }
                     },
-                    "Shakti": {
+                    {
                         "businessName": "Shakti",
                         "latitude": 0,
                         "longitude": 0,
@@ -58,7 +58,7 @@
                             "0003": "Awesome service and taste"
                         }
                     },
-                    "Sweety": {
+                    {
                         "businessName": "Sweety",
                         "latitude": 0,
                         "longitude": 0,
@@ -73,11 +73,55 @@
                             "0003": "Awesome service and taste"
                         }
                     }
-                },
-                "books": {},
-                "chemist": {},
-                "fruits": {},
-                "groceries": {}
+                ],
+                "books":[
+                    {
+                        "businessName": "Shiva Books",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    }
+                ],
+                "chemist": [
+                    {
+                        "businessName": "Shiva Chemist",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    }
+                ],
+                "fruits": [
+                    {
+                        "businessName": "Shiva Fruits",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    }
+                ],
+                "groceries": [
+                    {
+                        "businessName": "Shiva Departmental Store",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "paymentAccepted": "Google Pay,PayTm",
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    }
+                ]
             },
             "Sector3": {},
             "Sector4": {},
