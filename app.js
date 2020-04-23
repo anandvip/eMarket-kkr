@@ -1,5 +1,5 @@
 //fetch json data
-var kurukshetraEssn = fetch('https://github.com/anandvip/eMarket-kkr/blob/master/biz.json').then(post => post.json()).then(post => post.Haryana.Kurukshetra)
+var kurukshetraEssn = fetch('https://raw.githubusercontent.com/anandvip/eMarket-kkr/master/biz.json').then(post => post.json()).then(post => post.Haryana.Kurukshetra)
 var sec2;
 
 kurukshetraEssn.then(a => sec2 = a.Sector2);
