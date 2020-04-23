@@ -31,12 +31,16 @@ h5 {
 }
 .contact{
     background-color: #1EBEA5;
-    width: 100%;
+    min-width: 200px;
     padding: 5px 0px 5px 0px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    a:link{
+        text-decoration: none;
+        color:$darkBG-Font;
+    }
     .wa{
         background-image: url(/eMarket-kkr/img/whatsapp.png);
         background-position: left;
@@ -53,7 +57,7 @@ h5 {
     border-bottom: 1px #1EBEA5 solid;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    justify-items: start;
     align-items: center;
 }
 .minOrder{
