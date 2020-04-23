@@ -34,7 +34,7 @@ var changeLoc = () => {
                     </p>
                     </div>
                     <div class="homeDelivery">
-                    <span class="shopDtls contact"><span class="wa"></span>${sec2.books[0].contact}</span>
+                    <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/919896918475">${sec2.books[0].contact}</a></span>
                     <span class="minOrder">Minimum Order: ${sec2.books[0].minimumOrder}</span>
                     </div>
             `;
