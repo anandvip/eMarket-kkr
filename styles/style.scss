@@ -2,11 +2,15 @@ $primary:#222;
 $slat:#e3e3e3;
 $theGreen:#079188;
 $darkBG-Font:azure;
+$bName:#4A90E2;
+$feedback:#FFD184;
+$contact:#1EBEA5;
 
 @import "srvcs";
 @import "loc";
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600&display=swap');
 @import "content";
+@import "blist";
 *{
     box-sizing: border-box;
 }
@@ -22,6 +26,10 @@ body {
         padding: 1px;
         margin-bottom: 10px;
         color: $darkBG-Font;
+    }
+    section{
+        margin:0;
+        padding:0;
     }
 }
 

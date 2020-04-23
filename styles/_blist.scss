@@ -1,0 +1,37 @@
+
+h5 {
+    margin: 0;
+    padding: 0;
+    color: $bName;
+}
+
+.shops {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .feedback {
+        font-size: 0.7rem;
+        background-color: $feedback;
+        max-width: 32rem;
+        padding: 3px;
+        text-align: center;
+        border-radius: 5px;
+        justify-self: flex-end;
+    }
+    .shopDtls{
+        font-size: 0.8rem;
+    }
+}
+.contact{
+    background-color: $contact;
+    width: calc(100vw - 30rem);
+    padding: 5px 0px 5px 0px;
+}
+.homeDelivery{
+    width: 95vw;
+    border-top: 1px $contact solid;
+    border-bottom: 1px $contact solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
