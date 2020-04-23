@@ -81,7 +81,7 @@
                         "businessName": "Shiva Books",
                         "minimumOrder": "No Limit",
                         "workDuration":"6:00am - 2:00pm",
-                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "deliveryMode": "Counter sale / Home Delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
                         "shopImage": "https://imageservice.io/shop.jpg",
