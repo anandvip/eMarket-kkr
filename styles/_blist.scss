@@ -9,7 +9,10 @@ h5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
+    .shopData{
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
     .feedback {
         font-size: 0.7rem;
         background-color: $feedback;
@@ -22,19 +25,32 @@ h5 {
     .shopDtls{
         font-size: 0.8rem;
     }
+    .shopPay{
+        margin-top: 7px;
+    }
 }
 .contact{
     background-color: #1EBEA5;
     width: 100%;
     padding: 5px 0px 5px 0px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .wa{
+        background-image: url(/eMarket-kkr/img/whatsapp.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 2rem;
+        width: 2rem;
+        display: block;
+    }
 }
 .homeDelivery{
     width: 95vw;
     border-top: 1px #1EBEA5 solid;
     border-bottom: 1px #1EBEA5 solid;
-    padding-top: 5px;
-    padding-bottom: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;

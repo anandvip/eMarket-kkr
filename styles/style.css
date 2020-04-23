@@ -73,6 +73,13 @@ h5 {
           align-items: center;
 }
 
+.shops .shopData {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+}
+
 .shops .feedback {
   font-size: 0.7rem;
   background-color: #FFD184;
@@ -87,19 +94,40 @@ h5 {
   font-size: 0.8rem;
 }
 
+.shops .shopPay {
+  margin-top: 7px;
+}
+
 .contact {
   background-color: #1EBEA5;
   width: 100%;
   padding: 5px 0px 5px 0px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact .wa {
+  background-image: url(/eMarket-kkr/img/whatsapp.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2rem;
+  width: 2rem;
+  display: block;
 }
 
 .homeDelivery {
   width: 95vw;
   border-top: 1px #1EBEA5 solid;
   border-bottom: 1px #1EBEA5 solid;
-  padding-top: 5px;
-  padding-bottom: 5px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;

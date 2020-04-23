@@ -27,14 +27,14 @@ var changeLoc = () => {
                     <div class="shops">
                     <h5>${sec2.books[0].businessName}</h5>
                     <span class="feedback">Feedback</span>
-                    <p class="bkp_dtls">
+                    <p class="shopData">
                     <span class="shopDtls">${sec2.books[0].deliveryMode}</span><br>
                     <span class="shopDtls">Open ${sec2.books[0].workDuration}</span><br>
-                    <span>${sec2.books[0].paymentAccepted}</span>
+                    <span class="shopPay">${sec2.books[0].paymentAccepted}</span>
                     </p>
                     </div>
                     <div class="homeDelivery">
-                    <span class="shopDtls contact">${sec2.books[0].contact}</span>
+                    <span class="shopDtls contact"><span class="wa"></span>${sec2.books[0].contact}</span>
                     <span class="minOrder">Minimum Order: ${sec2.books[0].minimumOrder}</span>
                     </div>
             `;
