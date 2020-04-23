@@ -9,6 +9,7 @@ h5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    
     .shopData{
         display: grid;
         grid-template-rows: 1fr auto;
@@ -59,6 +60,7 @@ h5 {
     grid-template-columns: 1fr 1fr;
     justify-items: start;
     align-items: center;
+    margin-bottom: 20px;
 }
 .minOrder{
     font-size: 0.7rem;

@@ -37,7 +37,7 @@ var changeLoc = () => {
                     <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/919896918475">${sec2.books[0].contact}</a></span>
                     <span class="minOrder">Minimum Order: ${sec2.books[0].minimumOrder}</span>
                     </div>
-            `,`
+            
             <div class="shops">
             <h5>${sec2.books[1].businessName}</h5>
             <span class="feedback">Feedback</span>
