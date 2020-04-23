@@ -8,7 +8,7 @@
                         "businessName": "Shiva Bakery",
                         "minimumOrder": "No Limit",
                         "workDuration":"6:00am - 2:00pm",
-                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 5 - 13",
                         "shopImage": "https://imageservice.io/shop.jpg",
@@ -93,7 +93,7 @@
                     {
                         "businessName": "Shiva Chemist",
                         "minimumOrder": "No Limit",
-                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
                         "shopImage": "https://imageservice.io/shop.jpg",
@@ -105,7 +105,7 @@
                     {
                         "businessName": "Shiva Fruits",
                         "minimumOrder": "No Limit",
-                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
                         "shopImage": "https://imageservice.io/shop.jpg",
@@ -117,7 +117,7 @@
                     {
                         "businessName": "Shiva Departmental Store",
                         "minimumOrder": "No Limit",
-                        "deliveryMode": "Counter / Home Delivery / Packed(Ready to deliver at counter)",
+                        "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
                         "shopImage": "https://imageservice.io/shop.jpg",
