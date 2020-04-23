@@ -24,14 +24,22 @@ h5 {
     }
 }
 .contact{
-    background-color: $contact;
-    width: calc(100vw - 30rem);
+    background-color: #1EBEA5;
+    width: 100%;
     padding: 5px 0px 5px 0px;
+    text-align: center;
 }
 .homeDelivery{
     width: 95vw;
-    border-top: 1px $contact solid;
-    border-bottom: 1px $contact solid;
+    border-top: 1px #1EBEA5 solid;
+    border-bottom: 1px #1EBEA5 solid;
     padding-top: 5px;
     padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.minOrder{
+    font-size: 0.7rem;
 }

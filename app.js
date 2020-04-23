@@ -30,10 +30,12 @@ var changeLoc = () => {
                     <p class="bkp_dtls">
                     <span class="shopDtls">${sec2.books[0].deliveryMode}</span><br>
                     <span class="shopDtls">Open ${sec2.books[0].workDuration}</span><br>
+                    <span>${sec2.books[0].paymentAccepted}</span>
                     </p>
                     </div>
                     <div class="homeDelivery">
                     <span class="shopDtls contact">${sec2.books[0].contact}</span>
+                    <span class="minOrder">Minimum Order: ${sec2.books[0].minimumOrder}</span>
                     </div>
             `;
             break;

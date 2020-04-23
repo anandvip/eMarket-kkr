@@ -89,8 +89,9 @@ h5 {
 
 .contact {
   background-color: #1EBEA5;
-  width: calc(100vw - 30rem);
+  width: 100%;
   padding: 5px 0px 5px 0px;
+  text-align: center;
 }
 
 .homeDelivery {
@@ -99,6 +100,18 @@ h5 {
   border-bottom: 1px #1EBEA5 solid;
   padding-top: 5px;
   padding-bottom: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.minOrder {
+  font-size: 0.7rem;
 }
 
 * {
