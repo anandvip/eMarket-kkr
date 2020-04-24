@@ -13,14 +13,37 @@ var bkrs = gID("bakerCount"),
     bkrr = gID("bkr"),
     bkprs = gID("bookCount"), 
     chem = gID("chemCount"),
+    meds = gID("med"),
     vege = gID("vegCount"),
     groc = gID("grocerCount"),
     bkpDtl = gID("bks"),
     locKkr = gID('locKkr'),
     loc,
     bk = [],
+    medi = [],
     bkrD = [];
 
+    function chemistdata(tmplt){
+        for(var i = 0; i < sec2.chemist.length;i++){
+        
+            tmplt[i] =   `<div class="shops">
+               <h5>${sec2.chemist[i].businessName}</h5>
+               <span class="feedback">Feedback</span>
+               <p class="shopData">
+               <span class="shopDtls">${sec2.chemist[i].deliveryMode}</span><br>
+               <span class="shopDtls">Open ${sec2.chemist[i].workDuration}</span><br>
+               <span class="shopPay">${sec2.chemist[i].paymentAccepted}</span>
+               </p>
+               </div>
+               <div class="homeDelivery">
+               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.chemist[i].contact}">${sec2.chemist[i].contact}</a></span>
+               <span class="minOrder">Minimum Order: ${sec2.chemist[i].minimumOrder}</span>
+               </div>`
+               medi.push(tmplt[i])
+           }
+return medi
+
+    }
     function bakerData(tmplt){
         for(var i = 0; i < sec2.bakery.length;i++){
         
@@ -79,7 +102,8 @@ var changeLoc = () => {
                 vege.innerText = sec2.fruits.length,
                 groc.innerText = sec2.groceries.length,
                 bkpDtl.innerHTML = booksData(sec2.books),
-                bkrr.innerHTML = bakerData(sec2.bakery)
+                bkrr.innerHTML = bakerData(sec2.bakery),
+                meds.innerHTML = chemistdata(sec2.chemist)
                 ;        
             break;
         case "sector4":
@@ -90,11 +114,13 @@ var changeLoc = () => {
             // break;
         case "selectLocation":
             bkrs.innerText   =   '',
-            bkprs.innerText  =  '',
+            bkprs.innerText  =   '',
             chem.innerText   =   '',
             vege.innerText   =   '',
             groc.innerText   =   '',
-            bkpDtl.innerHTML = '';
+            bkrr.innerHTML   =   '',
+            meds.innerHTML   =   '',
+            bkpDtl.innerHTML =   '';
             break;
         default:
             console.log("No shop Data for the lcoation");

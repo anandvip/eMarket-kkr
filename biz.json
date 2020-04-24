@@ -120,7 +120,7 @@
                     {
                         "businessName": "Shiva Chemist",
                         "workDuration":"6:00am - 10:00pm",
-                        "minimumOrder": "No Limit",
+                        "minimumOrder": "₹200",
                         "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
