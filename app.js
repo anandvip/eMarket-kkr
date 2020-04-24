@@ -9,72 +9,95 @@ var gID = id => {
     return document.getElementById(id)
 }
 
-var bkrs = gID("bakerCount");
-var bkprs = gID("bookCount");
-var bkpDtl = gID("bks");
+var bkrs = gID("bakerCount"),
+    bkrr = gID("bkr"),
+    bkprs = gID("bookCount"), 
+    chem = gID("chemCount"),
+    vege = gID("vegCount"),
+    groc = gID("grocerCount"),
+    bkpDtl = gID("bks"),
+    locKkr = gID('locKkr'),
+    loc,
+    bk = [],
+    bkrD = [];
+
+    function bakerData(tmplt){
+        for(var i = 0; i < sec2.bakery.length;i++){
+        
+            tmplt[i] =   `<div class="shops">
+               <h5>${sec2.bakery[i].businessName}</h5>
+               <span class="feedback">Feedback</span>
+               <p class="shopData">
+               <span class="shopDtls">${sec2.bakery[i].deliveryMode}</span><br>
+               <span class="shopDtls">Open ${sec2.bakery[i].workDuration}</span><br>
+               <span class="shopPay">${sec2.bakery[i].paymentAccepted}</span>
+               </p>
+               </div>
+               <div class="homeDelivery">
+               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.bakery[i].contact}">${sec2.bakery[i].contact}</a></span>
+               <span class="minOrder">Minimum Order: ${sec2.bakery[i].minimumOrder}</span>
+               </div>`
+               bkrD.push(tmplt[i])
+           }
+return bkrD
+    }
+
+    function booksData(tmplt){
+        for(var i = 0; i < sec2.books.length;i++){
+        
+                    tmplt[i] =   `<div class="shops">
+                       <h5>${sec2.books[i].businessName}</h5>
+                       <span class="feedback">Feedback</span>
+                       <p class="shopData">
+                       <span class="shopDtls">${sec2.books[i].deliveryMode}</span><br>
+                       <span class="shopDtls">Open ${sec2.books[i].workDuration}</span><br>
+                       <span class="shopPay">${sec2.books[i].paymentAccepted}</span>
+                       </p>
+                       </div>
+                       <div class="homeDelivery">
+                       <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.books[i].contact}">${sec2.books[i].contact}</a></span>
+                       <span class="minOrder">Minimum Order: ${sec2.books[i].minimumOrder}</span>
+                       </div>`
+                       bk.push(tmplt[i])
+                   }
+        return bk
+                };
+
 //Select location to fire json
-document.getElementById('locKkr').addEventListener('change', function () {
-    console.log(loc = this.value);
+locKkr.addEventListener('change', ()=>{
+    loc = locKkr.value;
+    
     return changeLoc()
 });
-var loc;
+
 var changeLoc = () => {
     switch (loc) {
         case "sector2":
-            bkrs.innerText = sec2.bakery.length,
+                bkrs.innerText = sec2.bakery.length,
                 bkprs.innerText = sec2.books.length,
-                bkpDtl.innerHTML = `
-                    <div class="shops">
-                    <h5>${sec2.books[0].businessName}</h5>
-                    <span class="feedback">Feedback</span>
-                    <p class="shopData">
-                    <span class="shopDtls">${sec2.books[0].deliveryMode}</span><br>
-                    <span class="shopDtls">Open ${sec2.books[0].workDuration}</span><br>
-                    <span class="shopPay">${sec2.books[0].paymentAccepted}</span>
-                    </p>
-                    </div>
-                    <div class="homeDelivery">
-                    <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/919896918475">${sec2.books[0].contact}</a></span>
-                    <span class="minOrder">Minimum Order: ${sec2.books[0].minimumOrder}</span>
-                    </div>
-            
-            <div class="shops">
-            <h5>${sec2.books[1].businessName}</h5>
-            <span class="feedback">Feedback</span>
-            <p class="shopData">
-            <span class="shopDtls">${sec2.books[1].deliveryMode}</span><br>
-            <span class="shopDtls">Open ${sec2.books[1].workDuration}</span><br>
-            <span class="shopPay">${sec2.books[1].paymentAccepted}</span>
-            </p>
-            </div>
-            <div class="homeDelivery">
-            <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/919896918475">${sec2.books[1].contact}</a></span>
-            <span class="minOrder">Minimum Order: ${sec2.books[1].minimumOrder}</span>
-            </div>
-            `;
-            break;
-        case "sector7":
-            console.log("Sector 7 Shops data parsed from fetched json");
-            break;
-        case "mohannagar":
-            console.log("Mohannagar Shops data parsed from fetched json");
-            break;
-        case "sector13":
-            console.log("Sector 13 Shops data parsed from fetched json");
+                chem.innerText = sec2.chemist.length,
+                vege.innerText = sec2.fruits.length,
+                groc.innerText = sec2.groceries.length,
+                bkpDtl.innerHTML = booksData(sec2.books),
+                bkrr.innerHTML = bakerData(sec2.bakery)
+                ;        
             break;
         case "sector4":
             console.log("Sector 4 Shops data parsed from fetched json");
-            break;
+            // break;
         case "sector30":
             console.log("Sector 30 Shops data parsed from fetched json");
-            break;
+            // break;
         case "selectLocation":
-            bkrs.innerText = '',
-            bkprs.innerText = '',
+            bkrs.innerText   =   '',
+            bkprs.innerText  =  '',
+            chem.innerText   =   '',
+            vege.innerText   =   '',
+            groc.innerText   =   '',
             bkpDtl.innerHTML = '';
             break;
         default:
-            console.log("No shop Data for the lcoation")
+            console.log("No shop Data for the lcoation");
     }
 }
 
