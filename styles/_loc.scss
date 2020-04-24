@@ -1,8 +1,9 @@
-.location{
+.location {
     color: $primary;
     font-weight: 900;
     padding-left: 10px;
-    .mist{
+
+    .mist {
         font-size: 1.2rem;
         padding: 5px 8px;
         width: 90%;
@@ -10,13 +11,14 @@
         box-shadow: none;
         background-color: transparent;
         background-image: none;
-                appearance: none;
+        appearance: none;
     }
-    .mist:focus{
+
+    .mist:focus {
         outline: none;
     }
-    
-    .aset{
+
+    .aset {
         align-self: center;
         justify-self: center;
     }
