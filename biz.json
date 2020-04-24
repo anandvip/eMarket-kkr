@@ -17,8 +17,10 @@
                     },
                     {
                         "businessName": "Shivam",
+                        "workDuration":"6:00am - 2:00pm",
                         "latitude": 0,
                         "longitude": 0,
+                        "deliveryMode": "Counter sale",
                         "contact": 1234567890,
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
@@ -32,8 +34,10 @@
                     },
                     {
                         "businessName": "Shambhu",
+                        "workDuration":"6:00am - 2:00pm",
                         "latitude": 0,
                         "longitude": 0,
+                        "deliveryMode": "Counter sale",
                         "contact": 1234567890,
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
@@ -47,9 +51,11 @@
                     },
                     {
                         "businessName": "Shakti",
+                        "workDuration":"6:00am - 2:00pm",
                         "latitude": 0,
                         "longitude": 0,
                         "contact": 1234567890,
+                        "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
                         "shopImage": "https://imageservice.io/shop.jpg",
@@ -62,9 +68,11 @@
                     },
                     {
                         "businessName": "Sweety",
+                        "workDuration":"6:00am - 2:00pm",
                         "latitude": 0,
                         "longitude": 0,
                         "contact": 1234567890,
+                        "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
                         "shopImage": "https://imageservice.io/shop.jpg",
@@ -79,6 +87,7 @@
                 "books":[
                     {
                         "businessName": "Shiva Books",
+                        "workDuration":"6:00am - 2:00pm",
                         "minimumOrder": "No Limit",
                         "workDuration":"6:00am - 2:00pm",
                         "deliveryMode": "Counter sale / Home Delivery",
@@ -91,6 +100,7 @@
                     },
                     {
                         "businessName": "Sanjay Book Store",
+                        "workDuration":"6:00am - 2:00pm",
                         "minimumOrder": "No Limit",
                         "workDuration":"6:00am - 2:00pm",
                         "deliveryMode": "Counter sale / Home Delivery",
@@ -105,6 +115,7 @@
                 "chemist": [
                     {
                         "businessName": "Shiva Chemist",
+                        "workDuration":"6:00am - 10:00pm",
                         "minimumOrder": "No Limit",
                         "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
@@ -117,7 +128,8 @@
                 "fruits": [
                     {
                         "businessName": "Shiva Fruits",
-                        "minimumOrder": "No Limit",
+                        "workDuration":"6:00am - 2:00pm",
+                        "minimumOrder": "₹200",
                         "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
                         "deliveryRange": "Sector 7 - 13",
@@ -129,6 +141,7 @@
                 "groceries": [
                     {
                         "businessName": "Shiva Departmental Store",
+                        "workDuration":"6:00am - 2:00pm",
                         "minimumOrder": "No Limit",
                         "deliveryMode": "Counter sale / Home delivery",
                         "paymentAccepted": ["Google Pay","PayTm"],
