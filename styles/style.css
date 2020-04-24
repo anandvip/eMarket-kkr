@@ -17,6 +17,11 @@
   color: azure;
 }
 
+.catOpen {
+  background-color: #079188;
+  color: azure;
+}
+
 .location {
   color: #222;
   font-weight: 900;
@@ -232,16 +237,16 @@ body section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 6fr 1fr;
-      grid-template-columns: 1fr 6fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
   border-top: #e3e3e3 0.5pt solid;
   border-bottom: #e3e3e3 0.5pt solid;
   padding: 12px;
   width: 100%;
   margin-bottom: 5px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 10px;
+  -ms-flex-align: center;
+  align-items: center;
+  /* padding-left: 10px; */
 }
 
 .main .app .bizTyp {

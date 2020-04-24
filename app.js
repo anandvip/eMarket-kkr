@@ -135,6 +135,7 @@ var [selectLoc, khalsa, bkr, kitab, bks, davai, med, sabji, veg, kiryana, grc] =
 
 var catClick = (cat, sub) => {
     cat.addEventListener('click', () => {
+        cat.classList.toggle("catOpen")
         sub.classList.toggle("show")
     })
 }
