@@ -118,7 +118,18 @@
                 ],
                 "chemist": [
                     {
-                        "businessName": "Shiva Chemist",
+                        "businessName": "Tarun Medicos",
+                        "workDuration":"6:00am - 10:00pm",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter sale / Home delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    },
+                    {
+                        "businessName": "Apollo Pharmacy",
                         "workDuration":"6:00am - 10:00pm",
                         "minimumOrder": "₹200",
                         "deliveryMode": "Counter sale / Home delivery",
