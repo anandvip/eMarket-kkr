@@ -128,7 +128,7 @@ return bkrD.join("")
                        </p>
                        </div>
                        <div class="homeDelivery">
-                       <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.books[i].contact}">${sec2.books[i].contact}</a></span>
+                       <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${sec2.books[i].contact}">${sec2.books[i].contact}</a></span>
                        <span class="minOrder">Minimum Order: ${sec2.books[i].minimumOrder}</span>
                        </div>`
                        bk.push(tmplt[i])
