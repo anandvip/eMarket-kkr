@@ -47,7 +47,7 @@ function grcrData(tmplt) {
            </div>`
            grr.push(tmplt[i])
        }
-return grr 
+return grr.join("") 
 
 }
 
@@ -69,7 +69,7 @@ return grr
                </div>`
                fru.push(tmplt[i])
            }
-return fru 
+return fru.join("") 
 
     }
 
@@ -91,7 +91,7 @@ return fru
                </div>`
                medi.push(tmplt[i])
            }
-return medi
+return medi.join("")
 
     }
     function bakerData(tmplt){
@@ -112,7 +112,7 @@ return medi
                </div>`
                bkrD.push(tmplt[i])
            }
-return bkrD
+return bkrD.join("")
     }
 
     function booksData(tmplt){
@@ -133,9 +133,20 @@ return bkrD
                        </div>`
                        bk.push(tmplt[i])
                    }
-        return bk
+        return bk.join("")
                 };
-
+function kkrData() {
+    return bkrs.innerText = sec2.bakery.length,
+    bkprs.innerText = sec2.books.length,
+    chem.innerText = sec2.chemist.length,
+    vege.innerText = sec2.fruits.length,
+    groc.innerText = sec2.groceries.length,
+    bkpDtl.innerHTML = booksData(sec2.books),
+    bkrr.innerHTML = bakerData(sec2.bakery),
+    frut.innerHTML = vegData(sec2.fruits),
+    gr.innerHTML = grcrData(sec2.groceries),
+    meds.innerHTML = chemistdata(sec2.chemist)
+}
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
     loc = locKkr.value;
@@ -144,18 +155,7 @@ locKkr.addEventListener('change', ()=>{
 
 var changeLoc = () => {
     switch (loc) {
-        case "sector2":
-                bkrs.innerText = sec2.bakery.length,
-                bkprs.innerText = sec2.books.length,
-                chem.innerText = sec2.chemist.length,
-                vege.innerText = sec2.fruits.length,
-                groc.innerText = sec2.groceries.length,
-                bkpDtl.innerHTML = booksData(sec2.books),
-                bkrr.innerHTML = bakerData(sec2.bakery),
-                frut.innerHTML = vegData(sec2.fruits),
-                gr.innerHTML = grcrData(sec2.groceries),
-                meds.innerHTML = chemistdata(sec2.chemist)
-                ;        
+        case "sector2":kkrData();        
             break;
         case "sector4":
             console.log("Sector 4 Shops data parsed from fetched json");
