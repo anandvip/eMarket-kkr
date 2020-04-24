@@ -1,2 +1,2 @@
 # eMarket-kkr
-My residents Cooperate and deserve to stay united
+Kurukshetra residents are resiliant and cooperate. They deserve the best.
