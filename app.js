@@ -137,31 +137,31 @@ return bkrD.join("")
         return bk.join("")
                 };
 function kkrData() {
-    return  bkrs.innerText = sec2.bakery.length,
-            bkprs.innerText = sec2.books.length,
-            chem.innerText = sec2.chemist.length,
-            vege.innerText = sec2.fruits.length,
-            groc.innerText = sec2.groceries.length,
+    return  bkrs.innerText   = sec2.bakery.length,
+            bkprs.innerText  = sec2.books.length,
+            chem.innerText   = sec2.chemist.length,
+            vege.innerText   = sec2.fruits.length,
+            groc.innerText   = sec2.groceries.length,
             bkpDtl.innerHTML = booksData(sec2.books),
-            bkrr.innerHTML = bakerData(sec2.bakery),
-            frut.innerHTML = vegData(sec2.fruits),
-            gr.innerHTML = grcrData(sec2.groceries),
-            meds.innerHTML = chemistdata(sec2.chemist)
+            bkrr.innerHTML   = bakerData(sec2.bakery),
+            frut.innerHTML   = vegData(sec2.fruits),
+            gr.innerHTML     = grcrData(sec2.groceries),
+            meds.innerHTML   = chemistdata(sec2.chemist)
 }
 
 function clearContainer(){
     Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"))
     Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"))
-    return  bkrs.innerText   =   '',
-            bkprs.innerText  =   '',
-            chem.innerText   =   '',
-            vege.innerText   =   '',
-            groc.innerText   =   '',
-            bkrr.innerHTML   =   '',
-            meds.innerHTML   =   '',
-            frut.innerHTML   =   '',
-            gr.innerHTML     =   '',
-            bkpDtl.innerHTML =   '';
+    return  bkrs.innerText   = '',
+            bkprs.innerText  = '',
+            chem.innerText   = '',
+            vege.innerText   = '',
+            groc.innerText   = '',
+            bkrr.innerHTML   = '',
+            meds.innerHTML   = '',
+            frut.innerHTML   = '',
+            gr.innerHTML     = '',
+            bkpDtl.innerHTML = '';
 }
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
