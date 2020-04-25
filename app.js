@@ -42,7 +42,7 @@ function grcrData(tmplt) {
            </p>
            </div>
            <div class="homeDelivery">
-           <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.groceries[i].contact}">${sec2.groceries[i].contact}</a></span>
+           <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${sec2.groceries[i].contact}">${sec2.groceries[i].contact}</a></span>
            <span class="minOrder">Minimum Order: ${sec2.groceries[i].minimumOrder}</span>
            </div>`
            grr.push(tmplt[i])
@@ -64,7 +64,7 @@ return grr.join("")
                </p>
                </div>
                <div class="homeDelivery">
-               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.fruits[i].contact}">${sec2.fruits[i].contact}</a></span>
+               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${sec2.fruits[i].contact}">${sec2.fruits[i].contact}</a></span>
                <span class="minOrder">Minimum Order: ${sec2.fruits[i].minimumOrder}</span>
                </div>`
                fru.push(tmplt[i])
@@ -86,7 +86,7 @@ return fru.join("")
                </p>
                </div>
                <div class="homeDelivery">
-               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.chemist[i].contact}">${sec2.chemist[i].contact}</a></span>
+               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${sec2.chemist[i].contact}">${sec2.chemist[i].contact}</a></span>
                <span class="minOrder">Minimum Order: ${sec2.chemist[i].minimumOrder}</span>
                </div>`
                medi.push(tmplt[i])
@@ -107,7 +107,7 @@ return medi.join("")
                </p>
                </div>
                <div class="homeDelivery">
-               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/${sec2.bakery[i].contact}">${sec2.bakery[i].contact}</a></span>
+               <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${sec2.bakery[i].contact}">${sec2.bakery[i].contact}</a></span>
                <span class="minOrder">Minimum Order: ${sec2.bakery[i].minimumOrder}</span>
                </div>`
                bkrD.push(tmplt[i])
@@ -136,16 +136,29 @@ return bkrD.join("")
         return bk.join("")
                 };
 function kkrData() {
-    return bkrs.innerText = sec2.bakery.length,
-    bkprs.innerText = sec2.books.length,
-    chem.innerText = sec2.chemist.length,
-    vege.innerText = sec2.fruits.length,
-    groc.innerText = sec2.groceries.length,
-    bkpDtl.innerHTML = booksData(sec2.books),
-    bkrr.innerHTML = bakerData(sec2.bakery),
-    frut.innerHTML = vegData(sec2.fruits),
-    gr.innerHTML = grcrData(sec2.groceries),
-    meds.innerHTML = chemistdata(sec2.chemist)
+    return  bkrs.innerText = sec2.bakery.length,
+            bkprs.innerText = sec2.books.length,
+            chem.innerText = sec2.chemist.length,
+            vege.innerText = sec2.fruits.length,
+            groc.innerText = sec2.groceries.length,
+            bkpDtl.innerHTML = booksData(sec2.books),
+            bkrr.innerHTML = bakerData(sec2.bakery),
+            frut.innerHTML = vegData(sec2.fruits),
+            gr.innerHTML = grcrData(sec2.groceries),
+            meds.innerHTML = chemistdata(sec2.chemist)
+}
+
+function clearContainer(){
+    return  bkrs.innerText   =   '',
+            bkprs.innerText  =   '',
+            chem.innerText   =   '',
+            vege.innerText   =   '',
+            groc.innerText   =   '',
+            bkrr.innerHTML   =   '',
+            meds.innerHTML   =   '',
+            frut.innerHTML   =   '',
+            gr.innerHTML     =   '',
+            bkpDtl.innerHTML =   '';
 }
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
@@ -163,17 +176,8 @@ var changeLoc = () => {
         case "sector30":
             console.log("Sector 30 Shops data parsed from fetched json");
             // break;
-        case "selectLocation":
-            bkrs.innerText   =   '',
-            bkprs.innerText  =   '',
-            chem.innerText   =   '',
-            vege.innerText   =   '',
-            groc.innerText   =   '',
-            bkrr.innerHTML   =   '',
-            meds.innerHTML   =   '',
-            frut.innerHTML   =   '',
-            gr.innerHTML     =   '',
-            bkpDtl.innerHTML =   '';
+        case "selectLocation":clearContainer();
+
             break;
         default:
             console.log("No shop Data for the lcoation");
