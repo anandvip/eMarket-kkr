@@ -27,6 +27,7 @@ var bkrs = gID("bakerCount"),
     gr = gID("grc"),
     grr = [],
     locKkr = gID('locKkr'),
+    cc = null,
     loc;
 
 function grcrData(tmplt) {
@@ -149,6 +150,8 @@ function kkrData() {
 }
 
 function clearContainer(){
+    Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"))
+    Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"))
     return  bkrs.innerText   =   '',
             bkprs.innerText  =   '',
             chem.innerText   =   '',
