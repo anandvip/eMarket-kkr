@@ -169,7 +169,6 @@
             "Sector4": {
                 "bakery": [
                     {
-                        "businessType":"bakery",
                         "businessName": "Khalsa Bakery",
                         "minimumOrder": "No Limit",
                         "workDuration":"6:00am - 2:00pm",
