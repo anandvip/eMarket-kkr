@@ -237,6 +237,11 @@ body section {
   padding-left: 10px;
 }
 
+.main .app .district .desc {
+  color: #222;
+  font-size: 0.9rem;
+}
+
 .main .app .srvc {
   display: -ms-grid;
   display: grid;

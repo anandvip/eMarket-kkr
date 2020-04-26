@@ -5,6 +5,7 @@ $darkBG-Font:azure;
 $bName:#4A90E2;
 $feedback:#FFD184;
 $contact:#1EBEA5;
+$font-desc:0.9rem;
 
 @import "srvcs";
 @import "loc";
@@ -75,6 +76,10 @@ body {
 
             color: $theGreen;
             padding-left: 10px;
+            .desc{
+                color: $primary;
+                font-size: $font-desc;
+            }
         }
 
         .srvc {
