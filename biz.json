@@ -166,7 +166,117 @@
                 ]
             },
             "Sector3": {},
-            "Sector4": {},
+            "Sector4": {
+                "bakery": [
+                    {
+                        "businessType":"bakery",
+                        "businessName": "Khalsa Bakery",
+                        "minimumOrder": "No Limit",
+                        "workDuration":"6:00am - 2:00pm",
+                        "deliveryMode": "Counter sale / Home delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 5 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    },
+                    {
+                        "businessName": "Happy Bakers",
+                        "workDuration":"6:00am - 2:00pm",
+                        "minimumOrder": "No Limit",
+                        "latitude": 0,
+                        "longitude": 0,
+                        "deliveryMode": "Counter sale",
+                        "contact": 1234567890,
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "rating": 4,
+                        "comments": {
+                            "0001": "Awesome service and taste",
+                            "0002": "Awesome service and taste",
+                            "0003": "Awesome service and taste"
+                        }
+                    }
+                ],
+                "books":[
+                    {
+                        "businessName": "Sector-4 Book Store",
+                        "workDuration":"6:00am - 2:00pm",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter sale / Home Delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 9896918475,
+                        "whatsApp":"https://wa.me/919896918475",
+                        "rating": 4
+                    },
+                    {
+                        "businessName": "Kitaab Book Store",
+                        "minimumOrder": "No Limit",
+                        "workDuration":"6:00am - 2:00pm",
+                        "deliveryMode": "Counter sale / Home Delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 9896918475,
+                        "whatsApp":"https://wa.me/919896918475",
+                        "rating": 4
+                    }
+                ],
+                "chemist": [
+                    {
+                        "businessName": "Tarun Medicos",
+                        "workDuration":"6:00am - 10:00pm",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter sale / Home delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    },
+                    {
+                        "businessName": "Shanti Medical Store",
+                        "workDuration":"6:00am - 10:00pm",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter sale / Home delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 4 - Sector 8",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    }
+                ],
+                "fruits": [
+                    {
+                        "businessName": "Mukta Vegetables",
+                        "workDuration":"6:00am - 2:00pm",
+                        "minimumOrder": "₹200",
+                        "deliveryMode": "Counter sale / Home delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    }
+                ],
+                "groceries": [
+                    {
+                        "businessName": "Jain Departmental Store",
+                        "workDuration":"6:00am - 2:00pm",
+                        "minimumOrder": "No Limit",
+                        "deliveryMode": "Counter sale / Home delivery",
+                        "paymentAccepted": ["Google Pay","PayTm"],
+                        "deliveryRange": "Sector 7 - 13",
+                        "shopImage": "https://imageservice.io/shop.jpg",
+                        "contact": 1234567890,
+                        "rating": 4
+                    }
+                ]
+
+            },
             "Sector5": {
                 "bakery": {},
                 "books": {},

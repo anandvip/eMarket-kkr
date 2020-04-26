@@ -1,10 +1,9 @@
 //Author: Vipul Anand
 //fetch json data
 var kurukshetraEssn = fetch('https://raw.githubusercontent.com/anandvip/eMarket-kkr/master/biz.json').then(post => post.json()).then(post => post.Haryana.Kurukshetra)
-var sec2;
 
 kurukshetraEssn.then(a => sec2 = a.Sector2);
-
+kurukshetraEssn.then(a => sec7 = a.Sector7);
 
 //helper function for getting elements with ID
 var gID = id => {
@@ -30,8 +29,8 @@ var bkrs = gID("bakerCount"),
     cc = null,
     loc;
 
-function grcrData(tmplt) {
-    for(var i = 0; i < sec2.groceries.length;i++){
+    function grcrData(tmplt) {
+        for(var i = 0; i < sec2.groceries.length;i++){
         
         tmplt[i] =   `<div class="shops">
            <h5>${sec2.groceries[i].businessName}</h5>
@@ -136,7 +135,7 @@ return bkrD.join("")
                    }
         return bk.join("")
                 };
-function kkrData() {
+function sec2Data() {
     return  bkrs.innerText   = sec2.bakery.length,
             bkprs.innerText  = sec2.books.length,
             chem.innerText   = sec2.chemist.length,
@@ -152,7 +151,6 @@ function kkrData() {
 function clearContainer(){
     Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"))
     Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"))
-    location.reload()
     return  bkrs.innerText   = '',
             bkprs.innerText  = '',
             chem.innerText   = '',
@@ -167,16 +165,18 @@ function clearContainer(){
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
     loc = locKkr.value;
-    return changeLoc()
+    changeLoc()
 });
-
-var changeLoc = () => {
+locKkr.addEventListener('feedback', ()=>location.reload())
+//FIXME:data duplication with undefined in result section
+function changeLoc(){
+    
     switch (loc) {
-        case "sector2":localStorage.clear(),kkrData();        
+        case "sector2":kurukshetraEssn.then(a => sec2 = a.Sector2),sec2Data();        
             break;
-        case "sector4":
-            console.log("Sector 4 Shops data parsed from fetched json");
-            // break;
+        case "sector4":fetch('https://raw.githubusercontent.com/anandvip/eMarket-kkr/master/biz.json').then(post => post.json()).then(post => post.Haryana.Kurukshetra),
+            console.log("Sector 4 Shops data parsed from fetched json"),clearContainer();
+             break;
         case "sector30":
             console.log("Sector 30 Shops data parsed from fetched json");
             // break;
@@ -186,6 +186,7 @@ var changeLoc = () => {
         default:
             console.log("No shop Data for the lcoation");
     }
+
 }
 
 
@@ -210,3 +211,5 @@ catClick(kiryana, grc)
 
 
 console.log(kurukshetraEssn)
+
+//TODO: add sector4 data and then try resolving the undefined dupication
