@@ -152,6 +152,7 @@ function kkrData() {
 function clearContainer(){
     Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"))
     Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"))
+    location.reload()
     return  bkrs.innerText   = '',
             bkprs.innerText  = '',
             chem.innerText   = '',
@@ -171,7 +172,7 @@ locKkr.addEventListener('change', ()=>{
 
 var changeLoc = () => {
     switch (loc) {
-        case "sector2":kkrData();        
+        case "sector2":localStorage.clear(),kkrData();        
             break;
         case "sector4":
             console.log("Sector 4 Shops data parsed from fetched json");
