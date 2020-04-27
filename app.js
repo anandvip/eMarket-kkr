@@ -37,6 +37,7 @@ var bkrs = gID("bakerCount"),
 
      //Loop through the arrays of business category - AppWide
     function bizStore(tmplt,appDataStore){
+        
         for(var i = 0; i < tmplt.length;i++){
             tmplt[i] =   `<div class="shops">
                <h5>${tmplt[i].businessName}</h5>
@@ -58,37 +59,49 @@ return appDataStore.join("")
 
 //All for loops run to store category data in their respective array for sector 2
 function storeSec2Data(){
+    console.time()
     bizStore(sec2.bakery,bkrD2);
     bizStore(sec2.books,bk2);
     bizStore(sec2.fruits,fru);
     bizStore(sec2.groceries,grr);
     bizStore(sec2.chemist,medi);
+    console.timeEnd()
 }
+
 
 //All for loops run to store category data in their respective array for sector 4
 function storeSec4Data(){
+    console.time()
     bizStore(sec4.books,bk4);
     bizStore(sec4.bakery,bkrD4);
     bizStore(sec4.fruits,fru4);
     bizStore(sec4.groceries,grr4);
     bizStore(sec4.chemist,medi4);
+    console.timeEnd()
 }
 
 //sector 2 data updated to UI - - sector 2
 function sec2Data() {
-    return bkrs.innerText   = sec2.bakery.length,
+    console.time()
+    function ui(){
+        bkrs.innerText   = sec2.bakery.length,
             bkprs.innerText  = sec2.books.length,
             chem.innerText   = sec2.chemist.length,
             vege.innerText   = sec2.fruits.length,
-            groc.innerText   = sec2.groceries.length,
-            bkpDtl.innerHTML = bk2,
+            groc.innerText   = sec2.groceries.length
+    }
+    ui()
+    return bkpDtl.innerHTML = bk2,
             bkrr.innerHTML   = bkrD2,
             frut.innerHTML   = fru,
             gr.innerHTML     = grr,
-            meds.innerHTML   = medi
+            meds.innerHTML   = medi,
+            console.timeEnd()
 };
+
 //sector 4 data updated to UI - sector 4
 function sec4Data() {
+    console.time()
       bkrs.innerText   = sec4.bakery.length,
             bkprs.innerText  = sec4.books.length,
             chem.innerText   = sec4.chemist.length,
@@ -98,8 +111,9 @@ function sec4Data() {
             bkrr.innerHTML   = bkrD4,
             frut.innerHTML   = fru4,
             gr.innerHTML     = grr4,
-            meds.innerHTML   = medi4
-}
+            meds.innerHTML   = medi4,
+            console.timeEnd()
+};
 
 
 //clean html data from previous result - clean slate
