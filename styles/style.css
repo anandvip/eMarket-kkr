@@ -25,7 +25,7 @@
 }
 
 #bakerCount, #bookCount, #chemCount, #vegCount, #grocerCount {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   -webkit-transition: all ease-in-out 500ms;
   transition: all ease-in-out 500ms;
 }
@@ -284,7 +284,7 @@ body section {
 
 .main .app .bizTyp {
   margin-left: 5px;
-  font-size: 3rem;
+  font-size: 1.7rem;
 }
 
 .main .app .bizIcnT {
