@@ -18,12 +18,28 @@
 }
 
 .catOpen {
-  background-color: #079188;
+  background-color: #0000ee;
   color: azure;
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
 }
 
 #bakerCount, #bookCount, #chemCount, #vegCount, #grocerCount {
   font-size: 2.2rem;
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
+}
+
+.countIs1::after {
+  content: "shop";
+}
+
+.countIsMore::after {
+  content: "shops";
+}
+
+.countIs1::after, .countIsMore::after {
+  font-size: 0.8rem;
 }
 
 .location {
@@ -59,6 +75,8 @@
 }
 
 .main .app section.hide {
+  -webkit-transition: ease-in-out all 500ms;
+  transition: ease-in-out all 500ms;
   display: none;
 }
 
@@ -69,7 +87,7 @@
 h5 {
   margin: 0;
   padding: 0;
-  color: #4A90E2;
+  color: #0000ee;
 }
 
 .shops {
@@ -105,6 +123,10 @@ h5 {
 
 .shops .shopPay {
   margin-top: 7px;
+}
+
+.shopData:hover {
+  background-color: cornsilk;
 }
 
 .contact {
@@ -256,10 +278,13 @@ body section {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 10px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .main .app .bizTyp {
   margin-left: 5px;
+  font-size: 3rem;
 }
 
 .main .app .bizIcnT {

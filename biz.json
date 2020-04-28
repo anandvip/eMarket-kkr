@@ -299,7 +299,19 @@
                 "fruits": {},
                 "groceries": {}
             },
-            "MohanNagar": {}
+            "MohanNagar": {},
+            "Sector30": {
+                "groceries": [
+                    {
+                        "businessName": "Grand Stores Digital",
+                        "minimumOrder": "No Limit",
+                        "workDuration": "6:00am - 2:00pm",
+                        "deliveryMode": "Counter Sale / Home Delivery",
+                        "contact": "9896918475",
+                        "paymentAccepted": "Google Pay, PayTm, PhonePe"
+                      }
+                ]
+            }
         },
         "Karnal": {},
         "Panipat": {},

@@ -16,9 +16,23 @@
 }
 
 .catOpen{
-    background-color: #079188;
+    //background-color: #079188;
+    background-color: $thefutur;
     color: azure;
+    transition: all ease-in-out 500ms;
 }
 #bakerCount,#bookCount,#chemCount,#vegCount,#grocerCount{
     font-size: 2.2rem;
+    transition:all ease-in-out 500ms ;
+}
+
+.countIs1::after{
+    content: "shop";
+}
+.countIsMore::after{
+    content: "shops";
+}
+
+.countIs1::after,.countIsMore::after{
+    font-size: 0.8rem;
 }

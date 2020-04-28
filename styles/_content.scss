@@ -1,5 +1,6 @@
 
 .main .app section.hide{
+    transition: ease-in-out all 500ms;
     display: none;
 }
 .main .app section.show{

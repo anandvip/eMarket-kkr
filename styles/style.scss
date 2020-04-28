@@ -5,6 +5,7 @@ $darkBG-Font:azure;
 $bName:#4A90E2;
 $feedback:#FFD184;
 $contact:#1EBEA5;
+$thefutur:#0000ee;
 $font-desc:0.9rem;
 
 @import "srvcs";
@@ -92,10 +93,12 @@ body {
             margin-bottom: 5px;
             align-items: center;
             padding-left: 10px;
+            transition: all 500ms ease-in-out;
         }
 
         .bizTyp {
             margin-left: 5px;
+            font-size: 3rem;
         }
 
         .bizIcnT {
