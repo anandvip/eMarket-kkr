@@ -73,8 +73,12 @@ function storeKkrData(){
 
 //1shops or 1shop what should it return; exactly
 function sensikl(countID){
-    return countID.textContent === "1"?countID.classList.add("countIs1"):countID.classList.add("countIsMore")
+    countID.textContent === "1"?countID.classList.add("countIs1"):countID.classList.add("countIsMore")
 };
+//in UI if no shops in the area for a certain category, remove the countIdMore class
+function emptyCat(countID){
+    countID.textContent === ""?(countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):null):null
+}
 //Once selection changes to null the ::after content remains in UI, removing it from UI now
 function sensiklR(countID){
     countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):countID.classList.remove("countIs1")
@@ -124,9 +128,10 @@ function sec4Data() {
             
 };
 function sec30Data() {
+    groc.innerText   = `${sec30.groceries.length}`,
     locationGrocer(grr30,sec30),
     gr.innerHTML     = grr30,
-    sensi()
+    sensi(),cleanCats() 
 }
 
 //clean html data from previous result - clean slate
@@ -154,15 +159,17 @@ locKkr.addEventListener('change', ()=>{
 var bizCat = [[bkrs],[groc],[chem],[vege],[bkprs]];
 function sensi(){
     bizCat.forEach(e=>{sensikl.apply(null,e)})
-}
+};
+function cleanCats(){
+    bizCat.forEach(e=>emptyCat.apply(null,e))};
 function changeLoc(){
     
     switch (loc) {
-        case "sector2":sec2Data();        
+        case "sector2":clearContainer(),sec2Data();        
             break;
-        case "sector4":sec4Data();
+        case "sector4":clearContainer(),sec4Data();
             break;
-        case "sector30":sec30Data(),
+        case "sector30":clearContainer(),sec30Data(),
             console.log("Sector 30 Shops data parsed from fetched json");
             break;
         case "selectLocation":clearContainer();
