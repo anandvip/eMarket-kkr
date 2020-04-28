@@ -130,7 +130,7 @@ h5 {
 }
 
 .contact {
-  background-color: #1EBEA5;
+  background-color: #0000ee;
   min-width: 200px;
   padding: 5px 0px 5px 0px;
   text-align: center;
@@ -150,6 +150,11 @@ h5 {
   color: azure;
 }
 
+.contact a:visited {
+  text-decoration: none;
+  color: burlywood;
+}
+
 .contact .wa {
   background-image: url(/eMarket-kkr/img/whatsapp.png);
   background-position: left;
@@ -162,8 +167,8 @@ h5 {
 
 .homeDelivery {
   width: 95vw;
-  border-top: 1px #1EBEA5 solid;
-  border-bottom: 1px #1EBEA5 solid;
+  border-top: 1px #0000ee solid;
+  border-bottom: 1px #0000ee solid;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;

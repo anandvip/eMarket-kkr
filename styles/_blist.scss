@@ -35,7 +35,8 @@ h5 {
     background-color: cornsilk;
 }
 .contact{
-    background-color: #1EBEA5;
+    //background-color: #1EBEA5;
+    background-color: $thefutur;
     min-width: 200px;
     padding: 5px 0px 5px 0px;
     text-align: center;
@@ -45,6 +46,10 @@ h5 {
     a:link{
         text-decoration: none;
         color:$darkBG-Font;
+    }
+    a:visited{
+        text-decoration: none;
+        color: burlywood;
     }
     .wa{
         background-image: url(/eMarket-kkr/img/whatsapp.png);
@@ -58,8 +63,10 @@ h5 {
 }
 .homeDelivery{
     width: 95vw;
-    border-top: 1px #1EBEA5 solid;
-    border-bottom: 1px #1EBEA5 solid;
+    // border-top: 1px #1EBEA5 solid;
+    // border-bottom: 1px #1EBEA5 solid;    
+    border-top: 1px $thefutur solid;
+    border-bottom: 1px $thefutur solid;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: start;
