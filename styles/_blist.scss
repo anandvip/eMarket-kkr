@@ -74,6 +74,15 @@ h5 {
     justify-items: start;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
+}
+.homeDelivery::before {
+    content: "Order on WhatsApp";
+    font-size: 0.5rem;
+    font-family: 'PT Mono', monospace;
+    top: -10px;
+    position: absolute;
+    left: 1px;
 }
 .minOrder{
     font-size: 0.7rem;

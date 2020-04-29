@@ -40,8 +40,7 @@ var bkrs = gID("bakerCount"),
     loc;
 
      //Loop through the arrays of business category - AppWide
-    function bizStore(tmplt,appDataStore){
-        
+    function bizStore(tmplt,appDataStore){        
         for(var i = 0; i < tmplt.length;i++){
             tmplt[i] =   `<div class="shops">
                <h5>${tmplt[i].businessName}</h5>
@@ -58,7 +57,7 @@ var bkrs = gID("bakerCount"),
                </div>`
                appDataStore.push(tmplt[i])
            }          
-return appDataStore.join("")
+return appDataStore.join(" ")
     };
 
 
@@ -181,7 +180,6 @@ locKkr.addEventListener('change', ()=>{
 var bizCat = [[bkrs],[groc],[chem],[vege],[bkprs]];
 function sensi(){
     bizCat.forEach(e=>{
-
         sensikl.apply(null,e)})
 };
 function cleanCats(){
