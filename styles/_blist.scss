@@ -14,6 +14,7 @@ h5 {
     .shopData{
         display: grid;
         grid-template-rows: 1fr auto;
+        padding: 20px;
     }
     .feedback {
         font-size: 0.7rem;
@@ -32,7 +33,8 @@ h5 {
     }
 }
 .shopData:hover{
-    background-color: cornsilk;
+    border-radius: 10px;
+    border: 0.2pt solid $primary;
 }
 .contact{
     //background-color: #1EBEA5;
@@ -65,8 +67,8 @@ h5 {
     width: 95vw;
     // border-top: 1px #1EBEA5 solid;
     // border-bottom: 1px #1EBEA5 solid;    
-    border-top: 1px $thefutur solid;
-    border-bottom: 1px $thefutur solid;
+    border-top: 0.3pt $thefutur solid;
+    border-bottom: 0.3pt $thefutur solid;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: start;

@@ -36,6 +36,7 @@ var bkrs = gID("bakerCount"),
     locKkr = gID('locKkr'),
     cc = null,
     notify=gID('notify'),
+    rsltC = gID('rsltCount'),
     loc;
 
      //Loop through the arrays of business category - AppWide
@@ -95,8 +96,16 @@ var locationGrocer = (stor,loc)=>{
 }
 function sec2Data() {
         console.time()
+        rsltC.innerHTML = 
+        `<span>Results found: ${
+            sec2.books.length
+            +sec2.chemist.length
+            +sec2.fruits.length
+            +sec2.bakery.length
+            +sec2.groceries.length}</span>`
             locationBakery(sec2),
-            bkprs.innerText  = sec2.books.length,
+            locationBookKeepers(bkprs,sec2),
+            // bkprs.innerText  = sec2.books.length,
             chem.innerText   = sec2.chemist.length,
             vege.innerText   = sec2.fruits.length,
             groc.innerText   = `${sec2.groceries.length}`,
@@ -112,6 +121,15 @@ function sec2Data() {
 //sector 4 data updated to UI - sector 4
 function sec4Data() {
     console.time()
+            rsltC.innerHTML = `<span>
+                Results found: ${
+                    sec4.books.length
+                    +sec4.chemist.length
+                    +sec4.fruits.length
+                    +sec4.bakery.length
+                    +sec4.groceries.length
+                }
+            </span>`
             locationBakery(sec4),
             locationBookKeepers(bkprs,sec4),
             //bkprs.innerText  = sec4.books.length,
@@ -128,6 +146,7 @@ function sec4Data() {
             
 };
 function sec30Data() {
+    rsltC.innerHTML = `<span>Results found: ${sec30.groceries.length}</span>`
     groc.innerText   = `${sec30.groceries.length}`,
     locationGrocer(grr30,sec30),
     gr.innerHTML     = grr30,
@@ -149,6 +168,7 @@ function clearContainer(){
             frut.innerHTML   = '',
             gr.innerHTML     = '',
             notify.innerHTML = '',
+            rsltC.innerText  = '',
             bkpDtl.innerHTML = '';
 };
 //Select location to fire json
@@ -158,7 +178,9 @@ locKkr.addEventListener('change', ()=>{
 });
 var bizCat = [[bkrs],[groc],[chem],[vege],[bkprs]];
 function sensi(){
-    bizCat.forEach(e=>{sensikl.apply(null,e)})
+    bizCat.forEach(e=>{
+
+        sensikl.apply(null,e)})
 };
 function cleanCats(){
     bizCat.forEach(e=>emptyCat.apply(null,e))};

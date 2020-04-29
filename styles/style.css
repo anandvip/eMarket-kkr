@@ -6,6 +6,7 @@
 #kiryana {
   -webkit-transition: all ease-in 300ms;
   transition: all ease-in 300ms;
+  cursor: pointer;
 }
 
 #khalsa:hover,
@@ -84,6 +85,12 @@
   display: block;
 }
 
+#rsltCount {
+  text-align: right;
+  font-size: 0.7rem;
+  padding-right: 10px;
+}
+
 h5 {
   margin: 0;
   padding: 0;
@@ -105,6 +112,7 @@ h5 {
   display: grid;
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
+  padding: 20px;
 }
 
 .shops .feedback {
@@ -126,7 +134,8 @@ h5 {
 }
 
 .shopData:hover {
-  background-color: cornsilk;
+  border-radius: 10px;
+  border: 0.2pt solid #222;
 }
 
 .contact {
@@ -167,8 +176,8 @@ h5 {
 
 .homeDelivery {
   width: 95vw;
-  border-top: 1px #0000ee solid;
-  border-bottom: 1px #0000ee solid;
+  border-top: 0.3pt #0000ee solid;
+  border-bottom: 0.3pt #0000ee solid;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -195,6 +204,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   font-size: 110%;
+  position: relative;
 }
 
 body header {
@@ -208,6 +218,15 @@ body header {
 body section {
   margin: 0;
   padding: 0;
+}
+
+body footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 0.6rem;
+  padding: 3px 5px;
+  background-color: whitesmoke;
 }
 
 .main {

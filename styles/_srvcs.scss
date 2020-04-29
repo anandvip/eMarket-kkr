@@ -4,6 +4,7 @@
 #sabji,
 #kiryana{
     transition: all ease-in 300ms;
+    cursor: pointer;
 }
 
 #khalsa:hover,
@@ -24,7 +25,9 @@
 #bakerCount,#bookCount,#chemCount,#vegCount,#grocerCount{
     font-size: 1.5rem;
     transition:all ease-in-out 500ms ;
+    
 }
+#
 
 .countIs1::after{
     content: "shop";
