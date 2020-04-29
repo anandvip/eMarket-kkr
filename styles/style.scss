@@ -91,6 +91,15 @@ body {
             }
         }
 
+        #rsltCount{
+            font-size:0.7rem;
+            padding-right: 10px;
+            display: grid;
+            grid-template-columns: 1fr 6fr 1fr;
+            align-items: center;
+            padding-left: 10px;
+        }
+
         .srvc {
             display: grid;
             grid-template-columns: 1fr 6fr 1fr;

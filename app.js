@@ -97,7 +97,7 @@ var locationGrocer = (stor,loc)=>{
 function sec2Data() {
         console.time()
         rsltC.innerHTML = 
-        `<span>Results found: ${
+        `<span></span><span>District - Kurukshetra</span><span>Found: ${
             sec2.books.length
             +sec2.chemist.length
             +sec2.fruits.length
@@ -121,8 +121,8 @@ function sec2Data() {
 //sector 4 data updated to UI - sector 4
 function sec4Data() {
     console.time()
-            rsltC.innerHTML = `<span>
-                Results found: ${
+            rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>
+                Found: ${
                     sec4.books.length
                     +sec4.chemist.length
                     +sec4.fruits.length
@@ -146,7 +146,7 @@ function sec4Data() {
             
 };
 function sec30Data() {
-    rsltC.innerHTML = `<span>Results found: ${sec30.groceries.length}</span>`
+    rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>Found: ${sec30.groceries.length}</span>`
     groc.innerText   = `${sec30.groceries.length}`,
     locationGrocer(grr30,sec30),
     gr.innerHTML     = grr30,

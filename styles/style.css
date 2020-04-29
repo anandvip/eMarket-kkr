@@ -85,12 +85,6 @@
   display: block;
 }
 
-#rsltCount {
-  text-align: right;
-  font-size: 0.7rem;
-  padding-right: 10px;
-}
-
 h5 {
   margin: 0;
   padding: 0;
@@ -285,6 +279,19 @@ body footer {
 .main .app .district .desc {
   color: #222;
   font-size: 0.9rem;
+}
+
+.main .app #rsltCount {
+  font-size: 0.7rem;
+  padding-right: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr 1fr;
+      grid-template-columns: 1fr 6fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
 }
 
 .main .app .srvc {
