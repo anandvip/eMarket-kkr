@@ -282,12 +282,12 @@ body footer {
 }
 
 .main .app #rsltCount {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   padding-right: 10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 6fr 1fr;
-      grid-template-columns: 1fr 6fr 1fr;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
