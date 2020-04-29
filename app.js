@@ -62,7 +62,9 @@ return appDataStore.join("")
     };
 
 
-//All for loops run to store category data in their respective array for sector 2
+//JSON/Database data captured in KurukshetraEssen in one XHR, 
+//forEach and Apply used on recieved objects for all locations in selected District locations
+//Ready for UI implimentation
 function storeKkrData(){
     var data = [[sec2.bakery,bkrD2],[sec2.books,bk2],[sec2.fruits,fru],[sec2.groceries,grr],[sec2.chemist,medi],[sec4.books,bk4],[sec4.bakery,bkrD4],[sec4.fruits,fru4],[sec4.groceries,grr4],[sec4.chemist,medi4],[sec30.groceries,grr30]]
     data.forEach(e=>{
