@@ -1,7 +1,10 @@
 //Author: Vipul Anand
 //fetch json data
 //var sec2,sec4;
-var kurukshetraEssn = fetch('https://raw.githubusercontent.com/anandvip/eMarket-kkr/master/biz.json').then(post => post.json()).then(post => post.Haryana.Kurukshetra);
+var kurukshetraEssn = fetch('https://raw.githubusercontent.com/anandvip/eMarket-kkr/master/biz.json')
+.then(post => post.json())
+.then(post => post.Haryana.Kurukshetra)
+.catch(error=>console.log(error));
 
 kurukshetraEssn.then(a => sec2 = a.Sector2).then(storeKkrData);
 kurukshetraEssn.then(b => sec4 = b.Sector4)//.then(storeSec4Data);
@@ -37,8 +40,13 @@ var bkrs = gID("bakerCount"),
     cc = null,
     notify=gID('notify'),
     rsltC = gID('rsltCount'),
+    ttlShopCount,
     loc;
 
+    /**Helper Functions
+ * 
+ * @param {*} countID 
+ */
      //Loop through the arrays of business category - AppWide
     function bizStore(tmplt,storeInArray){        
         for(var i = 0; i < tmplt.length;i++){
@@ -86,67 +94,59 @@ function emptyCat(countID){
 function sensiklR(countID){
     countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):countID.classList.remove("countIs1")
 };
-//sector 2 data updated to UI - - sector 2
 function shopCount(stor,loc){
     stor.innerText = loc.length
 };
+//sector 2 data updated to UI - - sector 2
+//""reduce method"" used to get sum of total of array lengths of all business categories so that you could use ${ttlShopCount} in code!!
+function bizCountTtlAtLoc(locationArray){return locationArray.reduce((a,c)=> ttlShopCount = a+c,0)}
 function goesToHtml(ids,stor){
     ids.innerHTML = stor
 };
-function nc(arr){
-    console.log("No commas anymore!");
-    return arr.join("")
-}
 
-var locationBookKeepers = (stor,loc) => {
-    stor.innerText = loc.books.length
-}
+//no more commas in html results!!
+function nc(arr){
+    return arr.join("")
+};
 var locationGrocer = (stor,loc)=>{
     stor.innerText = loc.groceries.length
 }
+
+//individual business shops count, total business count, HTML data on page based on biz.json!!
 function sec2Data() {
+    console.time();
     var shopCountAtSec2 = [[bkrs,sec2.bakery],[bkprs,sec2.books],[chem,sec2.chemist],[vege,sec2.fruits],[groc,sec2.groceries]];
+    var bizCountAtSec2 = [sec2.bakery.length,sec2.books.length,sec2.chemist.length,sec2.fruits.length,sec2.groceries.length];
     var toHtml = [[bkpDtl,nc(bk2)],[bkrr,nc(bkrD2)],[frut,nc(fru)],[gr,nc(grr)],[meds,nc(medi)]];
     shopCountAtSec2.forEach(e=>{shopCount.apply(null,e)});
     toHtml.forEach(e=>goesToHtml.apply(null,e));
-
-        console.time();
-        rsltC.innerHTML = 
-        `<span></span><span>District - Kurukshetra</span><span>Found: ${
-            sec2.books.length
-            +sec2.chemist.length
-            +sec2.fruits.length
-            +sec2.bakery.length
-            +sec2.groceries.length}</span>`,
-            console.timeEnd(),
-            sensi()
+    bizCountTtlAtLoc(bizCountAtSec2);
+    rsltC.innerHTML =`<span></span><span>District - Kurukshetra</span><span>Found: ${ttlShopCount}</span>`,
+    sensi(),
+    console.timeEnd()   
 };
 
 //sector 4 data updated to UI - sector 4
 function sec4Data() {
+    console.time();
     var shopCountAtSec4 = [[bkrs,sec4.bakery],[bkprs,sec4.books],[chem,sec4.chemist],[vege,sec4.fruits],[groc,sec4.groceries]];
+    var bizCountAtSec4 = [sec4.bakery.length,sec4.books.length,sec4.chemist.length,sec4.fruits.length,sec4.groceries.length];
     var toHtml = [[bkpDtl,nc(bk4)],[bkrr,nc(bkrD4)],[frut,nc(fru4)],[gr,nc(grr4)],[meds,nc(medi4)]];
     shopCountAtSec4.forEach(e=>{shopCount.apply(null,e)});
     toHtml.forEach(e=>goesToHtml.apply(null,e));
-    console.time()
-            rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>
-                Found: ${
-                    sec4.books.length
-                    +sec4.chemist.length
-                    +sec4.fruits.length
-                    +sec4.bakery.length
-                    +sec4.groceries.length
-                }</span>`,
-            sensi(),
-            console.timeEnd()
-            
+    bizCountTtlAtLoc(bizCountAtSec4);
+    rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>Found: ${ttlShopCount}</span>`,
+    sensi(),
+    console.timeEnd()     
 };
 function sec30Data() {
+    console.time();
     rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>Found: ${sec30.groceries.length}</span>`,
-    groc.innerText   = sec30.groceries.length,
+    groc.innerText   = `${sec30.groceries.length}`,
     locationGrocer(grr30,sec30),
     gr.innerHTML     = grr30,
-    sensi(),cleanCats() 
+    sensi(),cleanCats(),
+    console.timeEnd() 
 }
 
 //clean html data from previous result - clean slate
@@ -154,22 +154,23 @@ function clearContainer(){
     Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"));
     Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"));
     bizCat.forEach(e=>{sensiklR.apply(null,e)});
-    return  bkrs.innerText   = '',
-            bkprs.innerText  = '',
-            chem.innerText   = '',
-            vege.innerText   = '',
-            groc.innerText   = '',
-            bkrr.innerHTML   = '',
+    return  bkrr.innerHTML   = '',
             meds.innerHTML   = '',
             frut.innerHTML   = '',
             gr.innerHTML     = '',
             notify.innerHTML = '',
+            bkpDtl.innerHTML = '',
             rsltC.innerText  = '',
-            bkpDtl.innerHTML = '';
+            bkrs.innerText   = '',
+            bkprs.innerText  = '',
+            chem.innerText   = '',
+            vege.innerText   = '',
+            groc.innerText   = ''
 };
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
     loc = locKkr.value;
+    locKkr.value !== "selectLocation"?addBiz.classList.toggle("hide"):addBiz.classList.toggle("show")
     changeLoc()
 });
 var bizCat = [[bkrs],[groc],[chem],[vege],[bkprs]];
@@ -189,12 +190,11 @@ function changeLoc(){
         case "sector30":clearContainer(),sec30Data(),
             console.log("Sector 30 Shops data parsed from fetched json");
             break;
-        case "selectLocation":clearContainer();
+        case "selectLocation":clearContainer(),addBiz.classList.toggle("show");
             break;
         default:
             console.log("No shop Data for the lcoation");
     }
-
 };
 
 
@@ -216,3 +216,22 @@ catClick(kitab, bks);
 catClick(davai, med);
 catClick(sabji, veg);
 catClick(kiryana, grc);
+
+//Disclaimer visibility check is a trackable element in app, capture clicks on it!!
+var dsclm = document.getElementById('dsclm');
+var ftr = document.querySelector(".ftr");
+ftr.addEventListener('click', ()=>{
+    dsclm.classList.toggle("show")
+})
+
+//reset the results and location User centric feature
+var reset = document.querySelector(".reset");
+reset.addEventListener('click',()=>{
+    locKkr.value = "selectLocation";
+    addBiz.classList.toggle("show")
+    locKkr.value == "selectLocation"?addBiz.classList.toggle("show"):locKkr.value !== "selectLocation"?addBiz.classList.toggle("hide"):addBiz.classList.toggle("show")
+    clearContainer()
+})
+
+//addBiz must hide is user selects location for checking results
+var addBiz = document.querySelector(".addBiz")
