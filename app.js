@@ -40,7 +40,7 @@ var bkrs = gID("bakerCount"),
     loc;
 
      //Loop through the arrays of business category - AppWide
-    function bizStore(tmplt,appDataStore){        
+    function bizStore(tmplt,storeInArray){        
         for(var i = 0; i < tmplt.length;i++){
             tmplt[i] =   `<div class="shops">
                <h5>${tmplt[i].businessName}</h5>
@@ -55,9 +55,10 @@ var bkrs = gID("bakerCount"),
                <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${tmplt[i].contact}">${tmplt[i].contact}</a></span>
                <span class="minOrder">Minimum Order: ${tmplt[i].minimumOrder}</span>
                </div>`
-               appDataStore.push(tmplt[i])
-           }          
-return appDataStore.join(" ")
+               storeInArray.push(tmplt[i])
+           }  
+                   
+return storeInArray.join("")
     };
 
 
@@ -86,9 +87,17 @@ function sensiklR(countID){
     countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):countID.classList.remove("countIs1")
 };
 //sector 2 data updated to UI - - sector 2
-function locationBakery(loc){
-    bkrs.innerText = loc.bakery.length
+function shopCount(stor,loc){
+    stor.innerText = loc.length
+};
+function goesToHtml(ids,stor){
+    ids.innerHTML = stor
+};
+function nc(arr){
+    console.log("No commas anymore!");
+    return arr.join("")
 }
+
 var locationBookKeepers = (stor,loc) => {
     stor.innerText = loc.books.length
 }
@@ -96,31 +105,29 @@ var locationGrocer = (stor,loc)=>{
     stor.innerText = loc.groceries.length
 }
 function sec2Data() {
-        console.time()
+    var shopCountAtSec2 = [[bkrs,sec2.bakery],[bkprs,sec2.books],[chem,sec2.chemist],[vege,sec2.fruits],[groc,sec2.groceries]];
+    var toHtml = [[bkpDtl,nc(bk2)],[bkrr,nc(bkrD2)],[frut,nc(fru)],[gr,nc(grr)],[meds,nc(medi)]];
+    shopCountAtSec2.forEach(e=>{shopCount.apply(null,e)});
+    toHtml.forEach(e=>goesToHtml.apply(null,e));
+
+        console.time();
         rsltC.innerHTML = 
         `<span></span><span>District - Kurukshetra</span><span>Found: ${
             sec2.books.length
             +sec2.chemist.length
             +sec2.fruits.length
             +sec2.bakery.length
-            +sec2.groceries.length}</span>`
-            locationBakery(sec2),
-            locationBookKeepers(bkprs,sec2),
-            // bkprs.innerText  = sec2.books.length,
-            chem.innerText   = sec2.chemist.length,
-            vege.innerText   = sec2.fruits.length,
-            groc.innerText   = `${sec2.groceries.length}`,
-            bkpDtl.innerHTML = bk2,
-            bkrr.innerHTML   = bkrD2,
-            frut.innerHTML   = fru,
-            gr.innerHTML     = grr,
-            meds.innerHTML   = medi,
+            +sec2.groceries.length}</span>`,
             console.timeEnd(),
             sensi()
 };
 
 //sector 4 data updated to UI - sector 4
 function sec4Data() {
+    var shopCountAtSec4 = [[bkrs,sec4.bakery],[bkprs,sec4.books],[chem,sec4.chemist],[vege,sec4.fruits],[groc,sec4.groceries]];
+    var toHtml = [[bkpDtl,nc(bk4)],[bkrr,nc(bkrD4)],[frut,nc(fru4)],[gr,nc(grr4)],[meds,nc(medi4)]];
+    shopCountAtSec4.forEach(e=>{shopCount.apply(null,e)});
+    toHtml.forEach(e=>goesToHtml.apply(null,e));
     console.time()
             rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>
                 Found: ${
@@ -129,26 +136,14 @@ function sec4Data() {
                     +sec4.fruits.length
                     +sec4.bakery.length
                     +sec4.groceries.length
-                }
-            </span>`
-            locationBakery(sec4),
-            locationBookKeepers(bkprs,sec4),
-            //bkprs.innerText  = sec4.books.length,
-            chem.innerText   = sec4.chemist.length,
-            vege.innerText   = sec4.fruits.length,
-            groc.innerText   = sec4.groceries.length,
-            bkpDtl.innerHTML = bk4,
-            bkrr.innerHTML   = bkrD4,
-            frut.innerHTML   = fru4,
-            gr.innerHTML     = grr4,
-            meds.innerHTML   = medi4,
+                }</span>`,
             sensi(),
             console.timeEnd()
             
 };
 function sec30Data() {
-    rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>Found: ${sec30.groceries.length}</span>`
-    groc.innerText   = `${sec30.groceries.length}`,
+    rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>Found: ${sec30.groceries.length}</span>`,
+    groc.innerText   = sec30.groceries.length,
     locationGrocer(grr30,sec30),
     gr.innerHTML     = grr30,
     sensi(),cleanCats() 
@@ -156,9 +151,9 @@ function sec30Data() {
 
 //clean html data from previous result - clean slate
 function clearContainer(){
-    Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"))
-    Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"))
-    bizCat.forEach(e=>{sensiklR.apply(null,e)})
+    Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"));
+    Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"));
+    bizCat.forEach(e=>{sensiklR.apply(null,e)});
     return  bkrs.innerText   = '',
             bkprs.innerText  = '',
             chem.innerText   = '',
