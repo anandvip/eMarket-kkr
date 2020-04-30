@@ -42,11 +42,19 @@
 .addBiz{
     display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
     background-image: url(/eMarket-kkr/img/AddBiz.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     height: 90px;
     cursor: pointer;
+    position: relative;
+}
+.addBiz::after{
+    content:"Add Your Business" ;
+    bottom: -25px;
+    left: 33%;
+    position: absolute;
+    font-size: 0.9rem;
+    color: $slat;
 }
