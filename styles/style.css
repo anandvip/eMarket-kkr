@@ -63,16 +63,16 @@
   height: 90px;
   cursor: pointer;
   position: relative;
-  -webkit-transition: 300ms all;
-  transition: 300ms all;
+  -webkit-transition: 200ms all;
+  transition: all 407.67ms ease 0ms;
 }
 
 .addBiz .addBizT {
   font-size: 0.9rem;
   color: #e3e3e3;
   margin-top: 100px;
-  -webkit-transition: 300ms all;
-  transition: 300ms all;
+  -webkit-transition: 100ms all;
+  transition: all 458.965ms ease 0ms;
 }
 
 .addBiz:hover {
@@ -82,8 +82,8 @@
 }
 
 .addBiz:hover .addBizT {
-  font-size: 1.6rem;
-  margin-top: 90px;
+  font-size: 1.3rem;
+  margin-top: 80px;
   color: dimgray;
 }
 

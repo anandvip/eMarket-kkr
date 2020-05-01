@@ -52,12 +52,12 @@
     height: 90px;
     cursor: pointer;
     position: relative;
-    transition: 300ms all;
+    transition: 200ms all;
     .addBizT{
         font-size: 0.9rem;
         color: $slat;
         margin-top: 100px;
-        transition: 300ms all;
+        transition: 100ms all;
     }
 }
 .addBiz:hover{
@@ -65,8 +65,8 @@
     height: 70px;
 
     .addBizT{
-        font-size:1.6rem;
-        margin-top: 90px;
+        font-size:1.3rem;
+        margin-top: 80px;
         color: dimgray;
     }
 }
