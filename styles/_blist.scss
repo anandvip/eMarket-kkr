@@ -13,7 +13,7 @@ h5 {
     
     .shopData{
         display: grid;
-        grid-template-rows: 1fr auto;
+        grid-template-columns: minmax(200px,1fr);
         padding: 20px;
     }
     .feedback {

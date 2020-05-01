@@ -42,19 +42,31 @@
 .addBiz{
     display: grid;
     grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
     background-image: url(/eMarket-kkr/img/AddBiz.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    filter:grayscale(100%);
     height: 90px;
     cursor: pointer;
     position: relative;
+    transition: 300ms all;
+    .addBizT{
+        font-size: 0.9rem;
+        color: $slat;
+        margin-top: 100px;
+        transition: 300ms all;
+    }
 }
-.addBiz::after{
-    content:"Add Your Business" ;
-    bottom: -25px;
-    left: 33%;
-    position: absolute;
-    font-size: 0.9rem;
-    color: $slat;
+.addBiz:hover{
+    filter:grayscale(0%);
+    height: 70px;
+
+    .addBizT{
+        font-size:1.6rem;
+        margin-top: 90px;
+        color: dimgray;
+    }
 }

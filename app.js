@@ -123,6 +123,7 @@ function sec2Data() {
     bizCountTtlAtLoc(bizCountAtSec2);
     rsltC.innerHTML =`<span></span><span>District - Kurukshetra</span><span>Found: ${ttlShopCount}</span>`,
     sensi(),
+    addBiz.classList.add("hide"),
     console.timeEnd()   
 };
 
@@ -137,6 +138,7 @@ function sec4Data() {
     bizCountTtlAtLoc(bizCountAtSec4);
     rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>Found: ${ttlShopCount}</span>`,
     sensi(),
+    addBiz.classList.add("hide"),
     console.timeEnd()     
 };
 function sec30Data() {
@@ -146,6 +148,7 @@ function sec30Data() {
     locationGrocer(grr30,sec30),
     gr.innerHTML     = grr30,
     sensi(),cleanCats(),
+    addBiz.classList.add("hide"),
     console.timeEnd() 
 }
 
@@ -154,6 +157,7 @@ function clearContainer(){
     Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"));
     Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"));
     bizCat.forEach(e=>{sensiklR.apply(null,e)});
+    addBiz.classList.remove("hide")
     return  bkrr.innerHTML   = '',
             meds.innerHTML   = '',
             frut.innerHTML   = '',
@@ -170,7 +174,6 @@ function clearContainer(){
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
     loc = locKkr.value;
-    locKkr.value !== "selectLocation"?addBiz.classList.toggle("hide"):addBiz.classList.toggle("show")
     changeLoc()
 });
 var bizCat = [[bkrs],[groc],[chem],[vege],[bkprs]];
@@ -190,7 +193,7 @@ function changeLoc(){
         case "sector30":clearContainer(),sec30Data(),
             console.log("Sector 30 Shops data parsed from fetched json");
             break;
-        case "selectLocation":clearContainer(),addBiz.classList.toggle("show");
+        case "selectLocation":clearContainer(),addBiz.classList.remove("hide");
             break;
         default:
             console.log("No shop Data for the lcoation");
@@ -228,8 +231,7 @@ ftr.addEventListener('click', ()=>{
 var reset = document.querySelector(".reset");
 reset.addEventListener('click',()=>{
     locKkr.value = "selectLocation";
-    addBiz.classList.toggle("show")
-    locKkr.value == "selectLocation"?addBiz.classList.toggle("show"):locKkr.value !== "selectLocation"?addBiz.classList.toggle("hide"):addBiz.classList.toggle("show")
+    locKkr.value === "selectLocation"?addBiz.classList.remove("hide"):(locKkr.value !== "selectLocation"?addBiz.classList.add("hide"):addBiz.classList.remove("hide"))
     clearContainer()
 })
 
