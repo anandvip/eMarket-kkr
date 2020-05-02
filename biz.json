@@ -153,16 +153,60 @@
                 ],
                 "groceries": [
                     {
-                        "businessName": "Shiva Departmental Store",
-                        "workDuration":"6:00am - 2:00pm",
+                        "businessName": "Vivek Kumar Sector 8",
+                        "businessType": "Groceries",
+                        "minimumOrder": "100",
+                        "workDuration": "6:00am - 2:00pm",
+                        "deliveryMode": "Counter Sale / Home Delivery",
+                        "contact": "9466347900",
+                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
+                        "paymentAccepted": "Google Pay, PayTm",
+                        "biz.json": [
+                          "groceries"
+                        ]
+                      },
+                      {
+                        "businessName": "Raju Provisional Store Sector 7",
+                        "businessType": "Groceries",
+                        "minimumOrder": "200",
+                        "workDuration": "6:00am - 2:00pm",
+                        "deliveryMode": "Counter Sale / Home Delivery",
+                        "contact": "9996601800",
+                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
+                        "paymentAccepted": "Paytm",
+                        "message": "Pipli and All Sectors",
+                        "biz.json": [
+                          "groceries"
+                        ]
+                      },
+                      {
+                        "businessName": "GuptaJi Provisional Store Sector 7",
+                        "businessType": "Groceries",
                         "minimumOrder": "No Limit",
-                        "deliveryMode": "Counter sale / Home delivery",
-                        "paymentAccepted": ["Google Pay","PayTm"],
-                        "deliveryRange": "Sector 7 - 13",
-                        "shopImage": "https://imageservice.io/shop.jpg",
-                        "contact": 1234567890,
-                        "rating": 4
-                    }
+                        "workDuration": "6:00am - 2:00pm",
+                        "deliveryMode": "Counter Sale / Home Delivery",
+                        "contact": "9813984411",
+                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
+                        "paymentAccepted": "Paytm",
+                        "message": "घर में रहो और safe रहो ",
+                        "biz.json": [
+                          "groceries"
+                        ]
+                      },
+                      {
+                        "businessName": "Affinity SuperMarket, Sector 10, Bus Stand",
+                        "businessType": "Groceries",
+                        "minimumOrder": "No Limit",
+                        "workDuration": "6:00am - 2:00pm",
+                        "deliveryMode": "Counter Sale / Home Delivery",
+                        "contact": "9518097109",
+                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
+                        "paymentAccepted": "Google Pay, PayTm",
+                        "message": "घर में रहो safe रहो",
+                        "biz.json": [
+                          "groceries"
+                        ]
+                      }
                 ]
             },
             "Sector3": {},
@@ -286,75 +330,8 @@
                         "biz.json": [
                           "groceries"
                         ]
-                      },
-                      {
-                        "businessName": "Vivek Kumar Sector 8",
-                        "businessType": "Groceries",
-                        "minimumOrder": "100",
-                        "workDuration": "6:00am - 2:00pm",
-                        "deliveryMode": "Counter Sale / Home Delivery",
-                        "contact": "9466347900",
-                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
-                        "paymentAccepted": "Google Pay, PayTm",
-                        "biz.json": [
-                          "groceries"
-                        ]
-                      },
-                      {
-                        "businessName": "Raju Provisional Store Sector 7",
-                        "businessType": "Groceries",
-                        "minimumOrder": "200",
-                        "workDuration": "6:00am - 2:00pm",
-                        "deliveryMode": "Counter Sale / Home Delivery",
-                        "contact": "9996601800",
-                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
-                        "paymentAccepted": "Paytm",
-                        "message": "Pipli and All Sectors",
-                        "biz.json": [
-                          "groceries"
-                        ]
-                      },
-                      {
-                        "businessName": "GuptaJi Provisional Store Sector 7",
-                        "businessType": "Groceries",
-                        "minimumOrder": "No Limit",
-                        "workDuration": "6:00am - 2:00pm",
-                        "deliveryMode": "Counter Sale / Home Delivery",
-                        "contact": "981394411",
-                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
-                        "paymentAccepted": "Paytm",
-                        "message": "घर में रहो और safe रहो ",
-                        "biz.json": [
-                          "groceries"
-                        ]
-                      },
-                      {
-                        "businessName": "Yogesh Kiryana Store",
-                        "businessType": "Groceries",
-                        "minimumOrder": "No Limit",
-                        "workDuration": "6:00am - 2:00pm",
-                        "deliveryMode": "Counter Sale / Home Delivery",
-                        "contact": "9896497687",
-                        "locatedIn": "Sector 30",
-                        "paymentAccepted": "Google Pay, PayTm, PhonePe",
-                        "biz.json": [
-                          "groceries"
-                        ]
-                      },
-                      {
-                        "businessName": "Affinity SuperMarket, Sector 10, Bus Stand",
-                        "businessType": "Groceries",
-                        "minimumOrder": "No Limit",
-                        "workDuration": "6:00am - 2:00pm",
-                        "deliveryMode": "Counter Sale / Home Delivery",
-                        "contact": "9518097109",
-                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
-                        "paymentAccepted": "Google Pay, PayTm",
-                        "message": "घर में रहो safe रहो",
-                        "biz.json": [
-                          "groceries"
-                        ]
                       }
+
                 ]
 
             },
@@ -385,12 +362,17 @@
             "Sector30": {
                 "groceries": [
                     {
-                        "businessName": "Grand Stores Digital",
+                        "businessName": "Yogesh Kiryana Store",
+                        "businessType": "Groceries",
                         "minimumOrder": "No Limit",
                         "workDuration": "6:00am - 2:00pm",
                         "deliveryMode": "Counter Sale / Home Delivery",
-                        "contact": "9896918475",
-                        "paymentAccepted": "Google Pay, PayTm, PhonePe"
+                        "contact": "9896497687",
+                        "locatedIn": "Sector 30",
+                        "paymentAccepted": "Google Pay, PayTm, PhonePe",
+                        "biz.json": [
+                          "groceries"
+                        ]
                       }
                 ]
             }
