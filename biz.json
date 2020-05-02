@@ -272,7 +272,34 @@
                         "shopImage": "https://imageservice.io/shop.jpg",
                         "contact": 1234567890,
                         "rating": 4
-                    }
+                    },
+                    {
+                        "businessName": "Bhagwati Kiryana Store, (Surinder) Sector 4",
+                        "businessType": "Groceries",
+                        "minimumOrder": "No Limit",
+                        "workDuration": "6:00am - 2:00pm",
+                        "deliveryMode": "Counter Sale / Home Delivery",
+                        "contact": "7404504550",
+                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
+                        "paymentAccepted": "Google Pay, PayTm, PhonePe",
+                        "message": "Delivering in Sectors 3,4",
+                        "biz.json": [
+                          "groceries"
+                        ]
+                      },
+                      {
+                        "businessName": "Vivek Kumar, Sector 8",
+                        "businessType": "Groceries",
+                        "minimumOrder": "₹100",
+                        "workDuration": "6:00am - 2:00pm",
+                        "deliveryMode": "Counter Sale / Home Delivery",
+                        "contact": "7404504550",
+                        "locatedIn": "Sector[2,3,4,5,7,8,10,13],Mohannagar",
+                        "paymentAccepted": "Google Pay, PayTm, PhonePe",
+                        "biz.json": [
+                          "groceries"
+                        ]
+                      }
                 ]
 
             },
