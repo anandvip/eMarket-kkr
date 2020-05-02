@@ -59,6 +59,7 @@ var bkrs = gID("bakerCount"),
                <span class="shopDtls">Open ${tmplt[i].workDuration}</span><br>
                <span class="shopPay">${tmplt[i].paymentAccepted}</span>
                </p>
+               <p><span>* * * * *</span><span><img src="https://picsum.photos/93/140"></span></p>
                </div>
                <div class="homeDelivery">
                <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${tmplt[i].contact}?text=%E0%A4%B9%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%98%E0%A4%B0%20%E0%A4%AA%E0%A4%B0%20%E0%A4%B8%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20%2C%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%80%20%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%8F%E0%A4%81%20%E0%A4%89%E0%A4%AA%E0%A4%B2%E0%A4%AC%E0%A5%8D%E0%A4%A7%20%E0%A4%B9%E0%A5%88%E0%A4%82%20%3F%20%0A%E0%A4%AF%E0%A4%B9%20%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A5%87%E0%A4%B6%20%E0%A4%95%E0%A5%81%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%20app%20https%3A%2F%2Fanandvip.github.io%2FeMarket-kkr%2F%20%E0%A4%A6%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A4%BE%20%E0%A4%AD%E0%A5%87%E0%A4%9C%E0%A4%BE%20%E0%A4%97%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20" target="_blank">${tmplt[i].contact} | Call</a><a href="tel:${tmplt[i].contact}"><img src="/eMarket-kkr/img/call.webp" height="32px"></a></span>
@@ -159,18 +160,18 @@ function clearContainer(){
     Array.from(document.querySelectorAll(".catOpen")).map(c=>c.classList.toggle("catOpen"));
     bizCat.forEach(e=>{sensiklR.apply(null,e)});
     addBiz.classList.remove("hide")
-    return  bkrr.innerHTML   = '',
-            meds.innerHTML   = '',
-            frut.innerHTML   = '',
-            gr.innerHTML     = '',
-            notify.innerHTML = '',
-            bkpDtl.innerHTML = '',
-            rsltC.innerText  = '',
-            bkrs.innerText   = '',
-            bkprs.innerText  = '',
-            chem.innerText   = '',
-            vege.innerText   = '',
-            groc.innerText   = ''
+    return  bkrr.innerHTML    = '',
+            meds.innerHTML    = '',
+            frut.innerHTML    = '',
+            gr.innerHTML      = '',
+            notify.innerHTML  = '',
+            bkpDtl.innerHTML  = '',
+            rsltC.innerText   = '',
+            bkrs.innerText    = '',
+            bkprs.innerText   = '',
+            chem.innerText    = '',
+            vege.innerText    = '',
+            groc.innerText    = ''
 };
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
