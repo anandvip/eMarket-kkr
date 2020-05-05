@@ -46,7 +46,7 @@ var bkrs = gID("bakerCount"),
 
     /**Helper Functions
  * 
- * @param {*} countID 
+ * @param {countID} countID 
  */
      //Loop through the arrays of business category - AppWide
     function bizStore(tmplt,storeInArray){        
@@ -56,10 +56,10 @@ var bkrs = gID("bakerCount"),
                <span class="feedback">Feedback</span>
                <p class="shopData">
                <span class="shopDtls">${tmplt[i].deliveryMode}</span><br>
-               <span class="shopDtls">Open ${tmplt[i].workDuration}</span><br>
+               <span class="shopDtls">Open ${tmplt[i].workDuration==="6:00am - 2:00pm"?"9:00am to 5:00pm":"6:00am - 2:00pm"}</span><br>
                <span class="shopPay">${tmplt[i].paymentAccepted}</span>
                </p>
-               <p><span>* * * * *</span><span><img src="https://picsum.photos/93/140"></span></p>
+               <p><span></span><span><img src="https://picsum.photos/93/140"></span></p>
                </div>
                <div class="homeDelivery">
                <span class="shopDtls contact"><span class="wa"></span><a href="https://wa.me/91${tmplt[i].contact}?text=%E0%A4%B9%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%98%E0%A4%B0%20%E0%A4%AA%E0%A4%B0%20%E0%A4%B8%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20%2C%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%80%20%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%8F%E0%A4%81%20%E0%A4%89%E0%A4%AA%E0%A4%B2%E0%A4%AC%E0%A5%8D%E0%A4%A7%20%E0%A4%B9%E0%A5%88%E0%A4%82%20%3F%20%0A%E0%A4%AF%E0%A4%B9%20%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A5%87%E0%A4%B6%20%E0%A4%95%E0%A5%81%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0%20app%20https%3A%2F%2Fanandvip.github.io%2FeMarket-kkr%2F%20%E0%A4%A6%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A4%BE%20%E0%A4%AD%E0%A5%87%E0%A4%9C%E0%A4%BE%20%E0%A4%97%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20" target="_blank">${tmplt[i].contact} | Call</a><a href="tel:${tmplt[i].contact}"><img src="/eMarket-kkr/img/call.webp" height="32px"></a></span>
@@ -83,7 +83,16 @@ function storeKkrData(){
         console.timeEnd()
     })
 };
-
+// function storeAllKkrData(){
+//     var data = [[sec2.bakery,bkrD2],[sec2.books,bk2],[sec2.fruits,fru],[sec2.groceries,grr],[sec2.chemist,medi],[sec4.books,bk2],[sec4.bakery,bkrD2],[sec4.fruits,fru],[sec4.groceries,grr],[sec4.chemist,medi],[sec30.groceries,grr]]
+//     data.forEach(e=>{
+//         console.time()
+//         bizStore.apply(null,e)
+//         console.timeEnd()
+//         console.log("coming from storeAllKkrData function");
+        
+//     })
+// }
 //1shops or 1shop what should it return; exactly
 function sensikl(countID){
     countID.textContent === "1"?countID.classList.add("countIs1"):countID.classList.add("countIsMore")
@@ -154,6 +163,20 @@ function sec30Data() {
     console.timeEnd() 
 }
 
+// let wholeCity = ()=>{
+//     kurukshetraEssn.then(storeAllKkrData);
+//     console.time();
+//     var shopCountAtSec2 = [[bkrs,sec2.bakery],[bkprs,sec2.books],[chem,sec2.chemist],[vege,sec2.fruits],[groc,sec2.groceries],[bkrs,sec4.bakery],[bkprs,sec4.books],[chem,sec4.chemist],[vege,sec4.fruits],[groc,sec4.groceries]];
+//     var bizCountAtSec2 = [sec2.bakery.length,sec2.books.length,sec2.chemist.length,sec2.fruits.length,sec2.groceries.length];
+//     var toHtml = [[bkpDtl,nc(bk2)],[bkrr,nc(bkrD2)],[frut,nc(fru)],[gr,nc(grr)],[meds,nc(medi)]];
+//     shopCountAtSec2.forEach(e=>{shopCount.apply(null,e)});
+//     toHtml.forEach(e=>goesToHtml.apply(null,e));
+//     bizCountTtlAtLoc(bizCountAtSec2);
+//     rsltC.innerHTML =`<span></span><span>District - Kurukshetra</span><span>Found: ${ttlShopCount}</span>`,
+//     sensi(),
+//     addBiz.classList.add("hide"),
+//     console.timeEnd()
+// }
 //clean html data from previous result - clean slate
 function clearContainer(){
     Array.from(document.querySelectorAll(".show")).map(c=>c.classList.toggle("show"));
@@ -195,10 +218,12 @@ function changeLoc(){
         case "sector30":clearContainer(),sec30Data(),
             console.log("Sector 30 Shops data parsed from fetched json");
             break;
+        // case "allOfKkr": wholeCity();
+        //     break;   
         case "selectLocation":clearContainer(),addBiz.classList.remove("hide");
             break;
         default:
-            console.log("No shop Data for the lcoation");
+            console.log("No shop Data for the location");
     }
 };
 

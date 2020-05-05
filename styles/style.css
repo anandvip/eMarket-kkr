@@ -105,6 +105,7 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  cursor: pointer;
 }
 
 .location .mist:focus {
@@ -123,6 +124,7 @@
   font-size: 0.8rem;
   text-align: center;
   font-family: 'PT Mono', monospace;
+  cursor: pointer;
 }
 
 .main .app section.hide {

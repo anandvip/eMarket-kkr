@@ -12,6 +12,7 @@
         background-color: transparent;
         background-image: none;
         appearance: none;
+        cursor: pointer;
     }
 
     .mist:focus {
@@ -26,5 +27,6 @@
         font-size: 0.8rem;
         text-align: center;
         font-family: 'PT Mono', monospace;
+        cursor: pointer;
     }
 }
