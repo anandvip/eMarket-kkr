@@ -264,3 +264,4 @@ reset.addEventListener('click',()=>{
 
 //addBiz must hide is user selects location for checking results
 var addBiz = document.querySelector(".addBiz")
+//TODO: if there are no shops in the area other than a few categories, hide the unavailable categories
