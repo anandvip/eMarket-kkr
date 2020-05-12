@@ -101,7 +101,7 @@ function sensikl(countID){
 function emptyCat(countID){
     countID.textContent === ""?(countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):null):null
 }
-//Once selection changes to null the ::after content remains in UI, removing it from UI now
+//Once selection changes to null the ::after content "Shops or Shop" remains in UI, removing it from UI now
 function sensiklR(countID){
     countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):countID.classList.remove("countIs1")
 };
