@@ -69,7 +69,7 @@ var bkrs = gID("bakerCount"),
            }  
                    
 return storeInArray.join("")
-    };
+    }
 
 
 //JSON/Database data captured in KurukshetraEssen in one XHR, 
@@ -82,7 +82,7 @@ function storeKkrData(){
         bizStore.apply(null,e)
         console.timeEnd()
     })
-};
+}
 // function storeAllKkrData(){
 //     var data = [[sec2.bakery,bkrD2],[sec2.books,bk2],[sec2.fruits,fru],[sec2.groceries,grr],[sec2.chemist,medi],[sec4.books,bk2],[sec4.bakery,bkrD2],[sec4.fruits,fru],[sec4.groceries,grr],[sec4.chemist,medi],[sec30.groceries,grr]]
 //     data.forEach(e=>{
@@ -96,7 +96,7 @@ function storeKkrData(){
 //1shops or 1shop what should it return; exactly
 function sensikl(countID){
     countID.textContent === "1"?countID.classList.add("countIs1"):countID.classList.add("countIsMore")
-};
+}
 //in UI if no shops in the area for a certain category, remove the countIdMore class
 function emptyCat(countID){
     countID.textContent === ""?(countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):null):null
@@ -104,21 +104,21 @@ function emptyCat(countID){
 //Once selection changes to null the ::after content "Shops or Shop" remains in UI, removing it from UI now
 function sensiklR(countID){
     countID.classList.contains("countIsMore")?countID.classList.remove("countIsMore"):countID.classList.remove("countIs1")
-};
+}
 function shopCount(stor,loc){
     stor.innerText = loc.length
-};
+}
 //sector 2 data updated to UI - - sector 2
 //""reduce method"" used to get sum of total of array lengths of all business categories so that you could use ${ttlShopCount} in code!!
 function bizCountTtlAtLoc(locationArray){return locationArray.reduce((a,c)=> ttlShopCount = a+c,0)}
 function goesToHtml(ids,stor){
     ids.innerHTML = stor
-};
+}
 
 //no more commas in html results!!
 function nc(arr){
     return arr.join("")
-};
+}
 var locationGrocer = (stor,loc)=>{
     stor.innerText = loc.groceries.length
 }
@@ -136,7 +136,7 @@ function sec2Data() {
     sensi(),
     addBiz.classList.add("hide"),
     console.timeEnd()   
-};
+}
 
 //sector 4 data updated to UI - sector 4
 function sec4Data() {
@@ -151,7 +151,7 @@ function sec4Data() {
     sensi(),
     addBiz.classList.add("hide"),
     console.timeEnd()     
-};
+}
 function sec30Data() {
     console.time();
     rsltC.innerHTML = `<span></span><span>District - Kurukshetra</span><span>Found: ${sec30.groceries.length}</span>`,
@@ -195,7 +195,7 @@ function clearContainer(){
             chem.innerText    = '',
             vege.innerText    = '',
             groc.innerText    = ''
-};
+}
 //Select location to fire json
 locKkr.addEventListener('change', ()=>{
     loc = locKkr.value;
@@ -205,9 +205,9 @@ var bizCat = [[bkrs],[groc],[chem],[vege],[bkprs]];
 function sensi(){
     bizCat.forEach(e=>{
         sensikl.apply(null,e)})
-};
+}
 function cleanCats(){
-    bizCat.forEach(e=>emptyCat.apply(null,e))};
+    bizCat.forEach(e=>emptyCat.apply(null,e))}
 function changeLoc(){
     
     switch (loc) {
@@ -225,7 +225,7 @@ function changeLoc(){
         default:
             console.log("No shop Data for the location");
     }
-};
+}
 
 
 
