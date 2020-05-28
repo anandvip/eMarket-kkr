@@ -40,7 +40,7 @@ h5 {
     //background-color: #1EBEA5;
     background-color: $thefutur;
     min-width: 225px;
-    padding: 5px 2px 5px 2px;
+    padding: 5px 2px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ h5 {
 .homeDelivery{
     width: 95vw;
     // border-top: 1px #1EBEA5 solid;
-    // border-bottom: 1px #1EBEA5 solid;    
+    // border-bottom: 1px #1EBEA5 solid;
     border-top: 0.3pt $thefutur solid;
     border-bottom: 0.3pt $thefutur solid;
     display: grid;
